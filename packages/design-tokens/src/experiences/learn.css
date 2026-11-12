@@ -1,0 +1,136 @@
+/*
+ * COSMOS DESIGN SYSTEM
+ * Learn — Experience Tokens
+ *
+ * Experience: Structured education and understanding.
+ * Supports: Deep Space and Stellar Light.
+ *
+ * All values reference existing primitive, theme,
+ * and semantic design tokens.
+ */
+
+/* ==========================================
+   DEEP SPACE THEME
+   ========================================== */
+
+:root[data-theme="deep-space"] {
+
+  /* IDENTITY */
+
+  --experience-learn-identity:
+    var(--primitive-color-brand-aurora);
+
+  --experience-learn-accent:
+    var(--primitive-color-domain-scientific-blue);
+
+  /* SURFACES */
+
+  --experience-learn-surface-primary:
+    var(--theme-color-surface-primary);
+
+  --experience-learn-surface-secondary:
+    var(--theme-color-surface-secondary);
+
+  --experience-learn-surface-elevated:
+    var(--theme-color-surface-elevated);
+
+  --experience-learn-surface-overlay:
+    var(--theme-color-surface-overlay);
+
+  /* DENSITY */
+
+  --experience-learn-density-inline:
+    var(--spacing-inline-normal);
+
+  --experience-learn-density-component:
+    var(--spacing-component-normal);
+
+  --experience-learn-density-content:
+    var(--spacing-content-relaxed);
+
+  --experience-learn-density-section:
+    var(--spacing-section-normal);
+
+  --experience-learn-density-layout:
+    var(--spacing-layout-comfortable);
+
+  /* ATMOSPHERE */
+
+  --experience-learn-atmosphere-background:
+    var(--theme-color-background-primary);
+
+  --experience-learn-atmosphere-depth:
+    var(--elevation-flat);
+
+  --experience-learn-atmosphere-glow:
+    var(--primitive-opacity-0);
+
+  --experience-learn-atmosphere-decoration:
+    var(--primitive-opacity-0);
+
+  --experience-learn-atmosphere-motion:
+    var(--motion-duration-instant);
+}
+
+/* ==========================================
+   STELLAR LIGHT THEME
+   ========================================== */
+
+:root[data-theme="stellar-light"] {
+
+  /* IDENTITY */
+
+  --experience-learn-identity:
+    var(--primitive-color-brand-aurora-700);
+
+  --experience-learn-accent:
+    var(--primitive-color-domain-scientific-blue-700);
+
+  /* SURFACES */
+
+  --experience-learn-surface-primary:
+    var(--theme-color-surface-primary);
+
+  --experience-learn-surface-secondary:
+    var(--theme-color-surface-secondary);
+
+  --experience-learn-surface-elevated:
+    var(--theme-color-surface-elevated);
+
+  --experience-learn-surface-overlay:
+    var(--theme-color-surface-overlay);
+
+  /* DENSITY */
+
+  --experience-learn-density-inline:
+    var(--spacing-inline-normal);
+
+  --experience-learn-density-component:
+    var(--spacing-component-normal);
+
+  --experience-learn-density-content:
+    var(--spacing-content-relaxed);
+
+  --experience-learn-density-section:
+    var(--spacing-section-normal);
+
+  --experience-learn-density-layout:
+    var(--spacing-layout-comfortable);
+
+  /* ATMOSPHERE */
+
+  --experience-learn-atmosphere-background:
+    var(--theme-color-background-primary);
+
+  --experience-learn-atmosphere-depth:
+    var(--elevation-flat);
+
+  --experience-learn-atmosphere-glow:
+    var(--primitive-opacity-0);
+
+  --experience-learn-atmosphere-decoration:
+    var(--primitive-opacity-0);
+
+  --experience-learn-atmosphere-motion:
+    var(--motion-duration-instant);
+}

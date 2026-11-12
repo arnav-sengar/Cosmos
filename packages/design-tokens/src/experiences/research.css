@@ -1,0 +1,136 @@
+/*
+ * COSMOS DESIGN SYSTEM
+ * Research — Experience Tokens
+ *
+ * Experience: Scientific research and analysis.
+ * Supports: Deep Space and Stellar Light.
+ *
+ * All values reference existing primitive, theme,
+ * and semantic design tokens.
+ */
+
+/* ==========================================
+   DEEP SPACE THEME
+   ========================================== */
+
+:root[data-theme="deep-space"] {
+
+  /* IDENTITY */
+
+  --experience-research-identity:
+    var(--primitive-color-domain-scientific-blue);
+
+  --experience-research-accent:
+    var(--primitive-color-domain-mission-silver);
+
+  /* SURFACES */
+
+  --experience-research-surface-primary:
+    var(--theme-color-surface-primary);
+
+  --experience-research-surface-secondary:
+    var(--theme-color-surface-secondary);
+
+  --experience-research-surface-elevated:
+    var(--theme-color-surface-elevated);
+
+  --experience-research-surface-overlay:
+    var(--theme-color-surface-overlay);
+
+  /* DENSITY */
+
+  --experience-research-density-inline:
+    var(--spacing-inline-tight);
+
+  --experience-research-density-component:
+    var(--spacing-component-compact);
+
+  --experience-research-density-content:
+    var(--spacing-content-tight);
+
+  --experience-research-density-section:
+    var(--spacing-section-compact);
+
+  --experience-research-density-layout:
+    var(--spacing-layout-compact);
+
+  /* ATMOSPHERE */
+
+  --experience-research-atmosphere-background:
+    var(--theme-color-background-primary);
+
+  --experience-research-atmosphere-depth:
+    var(--elevation-raised);
+
+  --experience-research-atmosphere-glow:
+    var(--primitive-opacity-0);
+
+  --experience-research-atmosphere-decoration:
+    var(--primitive-opacity-0);
+
+  --experience-research-atmosphere-motion:
+    var(--motion-duration-instant);
+}
+
+/* ==========================================
+   STELLAR LIGHT THEME
+   ========================================== */
+
+:root[data-theme="stellar-light"] {
+
+  /* IDENTITY */
+
+  --experience-research-identity:
+    var(--primitive-color-domain-scientific-blue-700);
+
+  --experience-research-accent:
+    var(--primitive-color-domain-mission-silver-700);
+
+  /* SURFACES */
+
+  --experience-research-surface-primary:
+    var(--theme-color-surface-primary);
+
+  --experience-research-surface-secondary:
+    var(--theme-color-surface-secondary);
+
+  --experience-research-surface-elevated:
+    var(--theme-color-surface-elevated);
+
+  --experience-research-surface-overlay:
+    var(--theme-color-surface-overlay);
+
+  /* DENSITY */
+
+  --experience-research-density-inline:
+    var(--spacing-inline-tight);
+
+  --experience-research-density-component:
+    var(--spacing-component-compact);
+
+  --experience-research-density-content:
+    var(--spacing-content-tight);
+
+  --experience-research-density-section:
+    var(--spacing-section-compact);
+
+  --experience-research-density-layout:
+    var(--spacing-layout-compact);
+
+  /* ATMOSPHERE */
+
+  --experience-research-atmosphere-background:
+    var(--theme-color-background-primary);
+
+  --experience-research-atmosphere-depth:
+    var(--elevation-raised);
+
+  --experience-research-atmosphere-glow:
+    var(--primitive-opacity-0);
+
+  --experience-research-atmosphere-decoration:
+    var(--primitive-opacity-0);
+
+  --experience-research-atmosphere-motion:
+    var(--motion-duration-instant);
+}

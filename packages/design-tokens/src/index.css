@@ -27,6 +27,12 @@
 @import "./domains/cosmic-environments.css";
 @import "./domains/human-exploration.css";
 
+/* Experience Tokens */
+@import "./experiences/explore.css";
+@import "./experiences/learn.css";
+@import "./experiences/research.css";
+@import "./experiences/community.css";
+
 /* Semantic Tokens */
 @import "./semantic/colors.css";
 @import "./semantic/typography.css";

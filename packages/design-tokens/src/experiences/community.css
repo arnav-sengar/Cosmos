@@ -1,0 +1,146 @@
+/*
+ * COSMOS DESIGN SYSTEM
+ * Community — Experience Tokens
+ *
+ * Experience: Shared discovery and collaboration.
+ * Supports: Deep Space and Stellar Light.
+ *
+ * All values reference existing primitive, theme,
+ * and semantic design tokens.
+ */
+
+/* ==========================================
+   DEEP SPACE THEME
+   ========================================== */
+
+:root[data-theme="deep-space"] {
+
+  /* IDENTITY */
+
+  --experience-community-identity:
+    var(--primitive-color-brand-nebula);
+
+  --experience-community-accent:
+    var(--primitive-color-brand-stellar-gold);
+
+  /* SURFACES */
+
+  --experience-community-surface-primary:
+    var(--theme-color-surface-primary);
+
+  --experience-community-surface-secondary:
+    var(--theme-color-surface-secondary);
+
+  --experience-community-surface-elevated:
+    var(--theme-color-surface-elevated);
+
+  --experience-community-surface-overlay:
+    var(--theme-color-surface-overlay);
+
+  /* DENSITY */
+
+  --experience-community-density-inline:
+    var(--spacing-inline-normal);
+
+  --experience-community-density-component:
+    var(--spacing-component-comfortable);
+
+  --experience-community-density-content:
+    var(--spacing-content-normal);
+
+  --experience-community-density-section:
+    var(--spacing-section-normal);
+
+  --experience-community-density-layout:
+    var(--spacing-layout-comfortable);
+
+  /* ATMOSPHERE */
+
+  --experience-community-atmosphere-background:
+    linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--experience-community-identity) 6%, transparent),
+      color-mix(in srgb, var(--experience-community-accent) 4%, transparent) 55%,
+      transparent 100%
+    );
+
+  --experience-community-atmosphere-depth:
+    var(--elevation-floating);
+
+  --experience-community-atmosphere-glow:
+    var(--primitive-opacity-10);
+
+  --experience-community-atmosphere-decoration:
+    var(--primitive-opacity-10);
+
+  --experience-community-atmosphere-motion:
+    var(--motion-duration-slow);
+}
+
+/* ==========================================
+   STELLAR LIGHT THEME
+   ========================================== */
+
+:root[data-theme="stellar-light"] {
+
+  /* IDENTITY */
+
+  --experience-community-identity:
+    var(--primitive-color-brand-nebula-700);
+
+  --experience-community-accent:
+    var(--primitive-color-brand-stellar-gold-700);
+
+  /* SURFACES */
+
+  --experience-community-surface-primary:
+    var(--theme-color-surface-primary);
+
+  --experience-community-surface-secondary:
+    var(--theme-color-surface-secondary);
+
+  --experience-community-surface-elevated:
+    var(--theme-color-surface-elevated);
+
+  --experience-community-surface-overlay:
+    var(--theme-color-surface-overlay);
+
+  /* DENSITY */
+
+  --experience-community-density-inline:
+    var(--spacing-inline-normal);
+
+  --experience-community-density-component:
+    var(--spacing-component-comfortable);
+
+  --experience-community-density-content:
+    var(--spacing-content-normal);
+
+  --experience-community-density-section:
+    var(--spacing-section-normal);
+
+  --experience-community-density-layout:
+    var(--spacing-layout-comfortable);
+
+  /* ATMOSPHERE */
+
+  --experience-community-atmosphere-background:
+    linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--experience-community-identity) 4%, transparent),
+      color-mix(in srgb, var(--experience-community-accent) 3%, transparent) 55%,
+      transparent 100%
+    );
+
+  --experience-community-atmosphere-depth:
+    var(--elevation-floating);
+
+  --experience-community-atmosphere-glow:
+    var(--primitive-opacity-10);
+
+  --experience-community-atmosphere-decoration:
+    var(--primitive-opacity-10);
+
+  --experience-community-atmosphere-motion:
+    var(--motion-duration-slow);
+}

@@ -1,0 +1,146 @@
+/*
+ * COSMOS DESIGN SYSTEM
+ * Explore — Experience Tokens
+ *
+ * Experience: Immersive cosmic discovery.
+ * Supports: Deep Space and Stellar Light.
+ *
+ * All values reference existing primitive, theme,
+ * and semantic design tokens.
+ */
+
+/* ==========================================
+   DEEP SPACE THEME
+   ========================================== */
+
+:root[data-theme="deep-space"] {
+
+  /* IDENTITY */
+
+  --experience-explore-identity:
+    var(--primitive-color-brand-celestial-blue);
+
+  --experience-explore-accent:
+    var(--primitive-color-domain-cosmic-purple);
+
+  /* SURFACES */
+
+  --experience-explore-surface-primary:
+    var(--theme-color-surface-primary);
+
+  --experience-explore-surface-secondary:
+    var(--theme-color-surface-secondary);
+
+  --experience-explore-surface-elevated:
+    var(--theme-color-surface-elevated);
+
+  --experience-explore-surface-overlay:
+    var(--theme-color-surface-overlay);
+
+  /* DENSITY */
+
+  --experience-explore-density-inline:
+    var(--spacing-inline-comfortable);
+
+  --experience-explore-density-component:
+    var(--spacing-component-spacious);
+
+  --experience-explore-density-content:
+    var(--spacing-content-spacious);
+
+  --experience-explore-density-section:
+    var(--spacing-section-extra-large);
+
+  --experience-explore-density-layout:
+    var(--spacing-layout-spacious);
+
+  /* ATMOSPHERE */
+
+  --experience-explore-atmosphere-background:
+    linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--experience-explore-identity) 12%, transparent),
+      color-mix(in srgb, var(--experience-explore-accent) 8%, transparent) 55%,
+      transparent 100%
+    );
+
+  --experience-explore-atmosphere-depth:
+    var(--elevation-floating);
+
+  --experience-explore-atmosphere-glow:
+    var(--primitive-opacity-30);
+
+  --experience-explore-atmosphere-decoration:
+    var(--primitive-opacity-30);
+
+  --experience-explore-atmosphere-motion:
+    var(--motion-duration-deliberate);
+}
+
+/* ==========================================
+   STELLAR LIGHT THEME
+   ========================================== */
+
+:root[data-theme="stellar-light"] {
+
+  /* IDENTITY */
+
+  --experience-explore-identity:
+    var(--primitive-color-brand-celestial-blue-700);
+
+  --experience-explore-accent:
+    var(--primitive-color-domain-cosmic-purple-700);
+
+  /* SURFACES */
+
+  --experience-explore-surface-primary:
+    var(--theme-color-surface-primary);
+
+  --experience-explore-surface-secondary:
+    var(--theme-color-surface-secondary);
+
+  --experience-explore-surface-elevated:
+    var(--theme-color-surface-elevated);
+
+  --experience-explore-surface-overlay:
+    var(--theme-color-surface-overlay);
+
+  /* DENSITY */
+
+  --experience-explore-density-inline:
+    var(--spacing-inline-comfortable);
+
+  --experience-explore-density-component:
+    var(--spacing-component-spacious);
+
+  --experience-explore-density-content:
+    var(--spacing-content-spacious);
+
+  --experience-explore-density-section:
+    var(--spacing-section-extra-large);
+
+  --experience-explore-density-layout:
+    var(--spacing-layout-spacious);
+
+  /* ATMOSPHERE */
+
+  --experience-explore-atmosphere-background:
+    linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--experience-explore-identity) 7%, transparent),
+      color-mix(in srgb, var(--experience-explore-accent) 4%, transparent) 55%,
+      transparent 100%
+    );
+
+  --experience-explore-atmosphere-depth:
+    var(--elevation-floating);
+
+  --experience-explore-atmosphere-glow:
+    var(--primitive-opacity-20);
+
+  --experience-explore-atmosphere-decoration:
+    var(--primitive-opacity-20);
+
+  --experience-explore-atmosphere-motion:
+    var(--motion-duration-deliberate);
+}
