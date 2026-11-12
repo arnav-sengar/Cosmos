@@ -1,0 +1,87 @@
+/* ==========================================================================
+   Cosmos Visualization Color Tokens
+   Palette version: 1.0
+   Themes: Deep Space, Stellar Light
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Deep Space
+   -------------------------------------------------------------------------- */
+
+:root[data-theme="deep-space"] {
+  /* Categorical — eight independent series */
+  --viz-color-categorical-01: #F2A900;
+  --viz-color-categorical-02: #56B4E9;
+  --viz-color-categorical-03: #00A878;
+  --viz-color-categorical-04: #F06A4E;
+  --viz-color-categorical-05: #D98BC3;
+  --viz-color-categorical-06: #3B8ED0;
+  --viz-color-categorical-07: #F0D65A;
+  --viz-color-categorical-08: #B8C5D8;
+
+  /* Sequential — low to high */
+  --viz-color-sequential-01: #5D8AC8;
+  --viz-color-sequential-02: #6F9AD1;
+  --viz-color-sequential-03: #80A9DA;
+  --viz-color-sequential-04: #91B8E3;
+  --viz-color-sequential-05: #A2C7EC;
+  --viz-color-sequential-06: #B3D6F5;
+  --viz-color-sequential-07: #C4E5FE;
+
+  /* Diverging — negative to positive */
+  --viz-color-diverging-01: #7C9CB8;
+  --viz-color-diverging-02: #8DAFCB;
+  --viz-color-diverging-03: #A3C2D8;
+  --viz-color-diverging-04: #C0C0C0;
+  --viz-color-diverging-05: #D48C84;
+  --viz-color-diverging-06: #C9857D;
+  --viz-color-diverging-07: #BC766E;
+
+  /* Neutral — subtle to strong */
+  --viz-color-neutral-01: #858B95;
+  --viz-color-neutral-02: #9DA3AC;
+  --viz-color-neutral-03: #B5BBC4;
+  --viz-color-neutral-04: #CDD2D9;
+  --viz-color-neutral-05: #E5E8ED;
+}
+
+/* --------------------------------------------------------------------------
+   Stellar Light
+   -------------------------------------------------------------------------- */
+
+:root[data-theme="stellar-light"] {
+  /* Categorical — eight independent series */
+  --viz-color-categorical-01: #A86A00;
+  --viz-color-categorical-02: #007DA8;
+  --viz-color-categorical-03: #007A58;
+  --viz-color-categorical-04: #C4472D;
+  --viz-color-categorical-05: #A84F82;
+  --viz-color-categorical-06: #00649C;
+  --viz-color-categorical-07: #857000;
+  --viz-color-categorical-08: #52677F;
+
+  /* Sequential — low to high */
+  --viz-color-sequential-01: #003C79;
+  --viz-color-sequential-02: #0E4883;
+  --viz-color-sequential-03: #1B548E;
+  --viz-color-sequential-04: #276098;
+  --viz-color-sequential-05: #336CA3;
+  --viz-color-sequential-06: #3E79AD;
+  --viz-color-sequential-07: #4A85B8;
+
+  /* Diverging — negative to positive */
+  --viz-color-diverging-01: #1E3E55;
+  --viz-color-diverging-02: #315169;
+  --viz-color-diverging-03: #44647E;
+  --viz-color-diverging-04: #747474;
+  --viz-color-diverging-05: #894D48;
+  --viz-color-diverging-06: #743936;
+  --viz-color-diverging-07: #5E2624;
+
+  /* Neutral — subtle to strong */
+  --viz-color-neutral-01: #737A84;
+  --viz-color-neutral-02: #626975;
+  --viz-color-neutral-03: #505763;
+  --viz-color-neutral-04: #3E4551;
+  --viz-color-neutral-05: #2D3440;
+}

@@ -1,0 +1,367 @@
+.page {
+  --viz-panel-background: var(--color-surface-primary);
+  --viz-panel-border: var(--color-border-subtle);
+
+  width: 100%;
+  min-height: 100vh;
+  padding: clamp(1.25rem, 4vw, 3.5rem);
+  color: var(--color-text-primary);
+  background: var(--color-background-canvas);
+}
+
+.header,
+.sectionHeading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.header {
+  max-width: 1440px;
+  margin: 0 auto 4rem;
+}
+
+.header h1 {
+  margin: 0;
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-size: clamp(2.25rem, 5vw, 4rem);
+  font-weight: 600;
+  letter-spacing: -0.045em;
+  line-height: 1.08;
+}
+
+.eyebrow {
+  margin: 0 0 0.75rem;
+  color: var(--color-text-tertiary);
+  font-family: var(--font-ibm-plex-mono), monospace;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+}
+
+.intro,
+.description {
+  max-width: 650px;
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.intro {
+  margin: 1.25rem 0 0;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  min-width: min(100%, 320px);
+}
+
+.controlGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  min-width: 0;
+  margin: 0;
+  padding: 0.85rem;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: 0.75rem;
+}
+
+.controlGroup legend {
+  padding: 0 0.35rem;
+  color: var(--color-text-tertiary);
+  font-size: 0.75rem;
+}
+
+.controlGroup button {
+  min-height: 36px;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--color-border-default);
+  border-radius: 0.5rem;
+  color: var(--color-text-secondary);
+  background: var(--color-surface-secondary);
+  font: inherit;
+  font-size: 0.78rem;
+  cursor: pointer;
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease;
+}
+
+.controlGroup button:hover {
+  border-color: var(--color-border-accent);
+  color: var(--color-text-primary);
+}
+
+.controlGroup button[aria-pressed="true"] {
+  border-color: var(--color-border-accent);
+  color: var(--color-text-primary);
+  background: var(--color-surface-elevated);
+}
+
+.controlGroup button:focus-visible {
+  outline: var(--focus-indicator-width) var(--focus-indicator-style) var(--viz-chart-focus-color);
+  outline-offset: var(--focus-indicator-offset);
+  border-radius: var(--focus-indicator-radius);
+}
+
+.section {
+  max-width: 1440px;
+  margin: 0 auto 3.5rem;
+}
+
+.sectionHeading {
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.sectionHeading h2 {
+  margin: 0;
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-size: clamp(1.35rem, 3vw, 1.8rem);
+  font-weight: 500;
+  letter-spacing: -0.025em;
+}
+
+.meta {
+  color: var(--color-text-tertiary);
+  font-family: var(--font-ibm-plex-mono), monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+}
+
+.panel {
+  min-width: 0;
+  padding: clamp(1rem, 3vw, 2rem);
+  overflow: hidden;
+  border: 1px solid var(--viz-panel-border);
+  border-radius: 1rem;
+  background: var(--viz-panel-background);
+}
+
+.panel h3 {
+  margin: 0;
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+
+.chart {
+  display: block;
+  width: 100%;
+  max-height: 380px;
+  overflow: visible;
+}
+
+.gridLine {
+  stroke: var(--viz-chart-grid-color);
+  stroke-width: var(--viz-chart-grid-width);
+  stroke-dasharray: var(--viz-chart-grid-dash);
+  opacity: var(--viz-chart-grid-opacity);
+}
+
+.axisLine {
+  stroke: var(--viz-chart-axis-color);
+  stroke-width: var(--viz-chart-axis-width);
+  opacity: var(--viz-chart-axis-opacity);
+}
+
+.legend {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.85rem 1.25rem;
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--color-border-subtle);
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  min-width: 0;
+  color: var(--color-text-secondary);
+  font-size: 0.82rem;
+}
+
+.legendMarker {
+  display: inline-flex;
+  flex: 0 0 20px;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+}
+
+.legendMarker svg {
+  width: 20px;
+  height: 20px;
+}
+
+.legendCode {
+  margin-left: auto;
+  color: var(--color-text-tertiary);
+  font-family: var(--font-ibm-plex-mono), monospace;
+  font-size: 0.65rem;
+}
+
+.paletteGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.paletteStrip {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 3px;
+  margin-top: 1.5rem;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.paletteSwatch {
+  min-width: 0;
+  height: 72px;
+}
+
+.scaleLabels {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: 0.65rem;
+  color: var(--color-text-tertiary);
+  font-family: var(--font-ibm-plex-mono), monospace;
+  font-size: 0.68rem;
+}
+
+.spatialDiagram {
+  display: block;
+  width: 100%;
+  max-height: 360px;
+  margin: 0 auto;
+}
+
+.orbit {
+  fill: none;
+  stroke: var(--viz-spatial-orbit-color);
+  stroke-width: var(--viz-spatial-orbit-width);
+  stroke-dasharray: var(--viz-spatial-orbit-dash);
+  opacity: var(--viz-spatial-orbit-opacity);
+}
+
+.referencePlane {
+  fill: none;
+  stroke: var(--viz-spatial-reference-color);
+  stroke-width: var(--viz-spatial-reference-width);
+  stroke-dasharray: var(--viz-spatial-reference-dash);
+  opacity: var(--viz-spatial-reference-opacity);
+}
+
+.trajectory {
+  fill: none;
+  stroke: var(--viz-spatial-trajectory-color);
+  stroke-width: var(--viz-spatial-trajectory-width);
+  stroke-dasharray: var(--viz-spatial-trajectory-dash);
+  opacity: var(--viz-spatial-trajectory-opacity);
+}
+
+.celestialBody {
+  fill: var(--viz-color-categorical-01);
+  stroke: var(--viz-spatial-object-outline);
+  stroke-width: var(--viz-spatial-object-outline-width);
+}
+
+.selectionRing {
+  fill: none;
+  stroke: var(--viz-spatial-object-selection);
+  stroke-width: var(--viz-spatial-object-selection-width);
+}
+
+.spatialObject {
+  fill: var(--viz-color-categorical-02);
+  stroke: var(--viz-spatial-object-outline);
+  stroke-width: var(--viz-spatial-object-outline-width);
+}
+
+.measurement,
+.measurementTick {
+  fill: none;
+  stroke: var(--viz-spatial-measurement-color);
+  stroke-width: var(--viz-spatial-measurement-width);
+}
+
+.measurement {
+  stroke-dasharray: var(--viz-spatial-measurement-dash);
+}
+
+.measurementLabel {
+  fill: var(--viz-spatial-label-color);
+  font-family: var(--font-ibm-plex-mono), monospace;
+  font-size: 11px;
+  text-anchor: middle;
+}
+
+.footer {
+  max-width: 1440px;
+  margin: 4rem auto 0;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--color-border-subtle);
+  color: var(--color-text-tertiary);
+  font-family: var(--font-ibm-plex-mono), monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+}
+
+@media (max-width: 900px) {
+  .header {
+    flex-direction: column;
+    margin-bottom: 3rem;
+  }
+
+  .controls {
+    width: 100%;
+  }
+
+  .legend {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .page {
+    padding: 1.25rem 1rem;
+  }
+
+  .paletteGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .sectionHeading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .legend {
+    gap: 0.75rem;
+  }
+
+  .paletteSwatch {
+    height: 54px;
+  }
+
+  .controlGroup {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .controlGroup button {
+    transition: none;
+  }
+}

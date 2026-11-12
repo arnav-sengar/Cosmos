@@ -1,0 +1,56 @@
+/* ==========================================================================
+   Cosmos Visualization Spatial Tokens
+   Renderer-independent spatial visualization styling
+   ========================================================================== */
+
+:root {
+  /* ORBITAL PATHS */
+
+  --viz-spatial-orbit-color: var(--viz-color-neutral-02);
+  --viz-spatial-orbit-width: 1px;
+  --viz-spatial-orbit-opacity: 0.45;
+  --viz-spatial-orbit-dash: 3 5;
+
+  /* TRAJECTORIES */
+
+  --viz-spatial-trajectory-color: var(--viz-color-neutral-04);
+  --viz-spatial-trajectory-width: 2px;
+  --viz-spatial-trajectory-opacity: 0.9;
+  --viz-spatial-trajectory-dash: 6 3;
+
+  /* CELESTIAL OBJECTS */
+
+  --viz-spatial-object-outline: var(--viz-color-neutral-04);
+  --viz-spatial-object-outline-width: 1px;
+  --viz-spatial-object-selection: var(--color-border-accent);
+  --viz-spatial-object-selection-width: 2px;
+
+  /* SPATIAL REFERENCE ELEMENTS */
+
+  --viz-spatial-reference-color: var(--viz-color-neutral-03);
+  --viz-spatial-reference-width: 1px;
+  --viz-spatial-reference-opacity: 0.65;
+  --viz-spatial-reference-dash: 2 4;
+
+  /* DEPTH AND HIGHLIGHTING */
+
+  --viz-spatial-depth-near: 1;
+  --viz-spatial-depth-far: 0.45;
+  --viz-spatial-highlight-opacity: 0.9;
+  --viz-spatial-highlight-glow-opacity: 0.2;
+
+  /* MEASUREMENTS AND SCALE INDICATORS */
+
+  --viz-spatial-measurement-color: var(--color-text-secondary);
+  --viz-spatial-measurement-width: 1.5px;
+  --viz-spatial-measurement-dash: 4 3;
+  --viz-spatial-scale-color: var(--color-border-strong);
+  --viz-spatial-scale-width: 1.5px;
+  --viz-spatial-label-color: var(--color-text-primary);
+
+  /* SELECTION AND FOCUS */
+
+  --viz-spatial-focus-color: var(--color-border-accent);
+  --viz-spatial-focus-width: 2px;
+  --viz-spatial-focus-offset: 3px;
+}
