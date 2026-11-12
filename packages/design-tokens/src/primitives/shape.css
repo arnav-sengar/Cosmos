@@ -1,0 +1,25 @@
+
+/*
+ * COSMOS DESIGN SYSTEM
+ * Primitive Shape Tokens
+ *
+ * Raw geometry values only.
+ */
+
+:root {
+  /* BORDER RADIUS SCALE */
+
+  --primitive-radius-1: 4px;
+  --primitive-radius-2: 8px;
+  --primitive-radius-3: 12px;
+  --primitive-radius-4: 16px;
+  --primitive-radius-5: 24px;
+  --primitive-radius-full: 9999px;
+
+  /* BORDER WIDTH SCALE */
+
+  --primitive-border-width-none: 0px;
+  --primitive-border-width-thin: 1px;
+  --primitive-border-width-medium: 2px;
+  --primitive-border-width-thick: 4px;
+}

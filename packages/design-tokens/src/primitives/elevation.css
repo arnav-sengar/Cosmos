@@ -1,0 +1,27 @@
+
+/*
+ * COSMOS DESIGN SYSTEM
+ * Primitive Elevation Tokens
+ *
+ * Raw depth and shadow values only.
+ */
+
+:root {
+  /* ELEVATION LEVELS */
+
+  --primitive-elevation-0: none;
+
+  --primitive-elevation-1:
+    0 1px 2px rgb(0 0 0 / 0.12);
+
+  --primitive-elevation-2:
+    0 4px 12px rgb(0 0 0 / 0.16);
+
+  --primitive-elevation-3:
+    0 12px 32px rgb(0 0 0 / 0.20);
+
+  /* INSET DEPTH */
+
+  --primitive-elevation-inset:
+    inset 0 1px 2px rgb(0 0 0 / 0.12);
+}

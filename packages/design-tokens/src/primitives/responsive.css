@@ -1,0 +1,17 @@
+
+/*
+ * COSMOS DESIGN SYSTEM
+ * Primitive Responsive Tokens
+ *
+ * Minimum viewport widths for responsive layouts.
+ */
+
+:root {
+  /* VIEWPORT BREAKPOINTS */
+
+  --primitive-breakpoint-small-tablet: 640px;
+  --primitive-breakpoint-tablet: 768px;
+  --primitive-breakpoint-desktop: 1024px;
+  --primitive-breakpoint-wide: 1280px;
+  --primitive-breakpoint-ultra-wide: 1536px;
+}

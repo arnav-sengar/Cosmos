@@ -1,0 +1,46 @@
+
+/*
+ * COSMOS DESIGN SYSTEM
+ * Primitive Sizing Tokens
+ *
+ * Raw dimensional values only.
+ */
+
+:root {
+  /* CONTROL HEIGHTS */
+
+  --primitive-size-control-xs: 32px;
+  --primitive-size-control-sm: 36px;
+  --primitive-size-control-md: 40px;
+  --primitive-size-control-lg: 48px;
+  --primitive-size-control-xl: 56px;
+
+  /* INPUT DIMENSIONS */
+
+  --primitive-size-input-sm: 40px;
+  --primitive-size-input-md: 44px;
+  --primitive-size-input-lg: 48px;
+
+  /* ICON DIMENSIONS */
+
+  --primitive-size-icon-xs: 12px;
+  --primitive-size-icon-sm: 16px;
+  --primitive-size-icon-md: 20px;
+  --primitive-size-icon-lg: 24px;
+  --primitive-size-icon-xl: 32px;
+
+  /* LAYOUT DIMENSIONS */
+
+  --primitive-size-reading-width: 720px;
+  --primitive-size-container-standard: 1200px;
+  --primitive-size-container-wide: 1440px;
+
+  /* SIDEBAR DIMENSIONS */
+
+  --primitive-size-sidebar-min: 256px;
+  --primitive-size-sidebar-max: 280px;
+
+  /* INTERACTION TARGETS */
+
+  --primitive-size-target-min: 44px;
+}

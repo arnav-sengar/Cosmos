@@ -1,0 +1,36 @@
+
+/*
+ * COSMOS DESIGN SYSTEM
+ * Primitive Motion Tokens
+ *
+ * Raw animation durations and easing curves.
+ */
+
+:root {
+  /* MOTION DURATIONS */
+
+  --primitive-duration-instant: 0ms;
+  --primitive-duration-fast: 150ms;
+  --primitive-duration-normal: 250ms;
+  --primitive-duration-slow: 400ms;
+  --primitive-duration-deliberate: 600ms;
+    /* REDUCED MOTION */
+
+  --primitive-duration-reduced: 0ms;
+
+  /* MOTION EASING */
+
+  --primitive-easing-linear: linear;
+
+  --primitive-easing-standard:
+    cubic-bezier(0.2, 0, 0, 1);
+
+  --primitive-easing-decelerate:
+    cubic-bezier(0, 0, 0.2, 1);
+
+  --primitive-easing-accelerate:
+    cubic-bezier(0.4, 0, 1, 1);
+
+  --primitive-easing-emphasized:
+    cubic-bezier(0.2, 0, 0, 1.2);
+}

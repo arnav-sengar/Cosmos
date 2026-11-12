@@ -1,0 +1,21 @@
+
+/*
+ * COSMOS DESIGN SYSTEM
+ * Primitive Typography Tokens
+ *
+ * Raw font-family references.
+ * Semantic roles are defined separately.
+ */
+
+:root {
+  /* FONT FAMILIES */
+
+  --primitive-font-family-space-grotesk:
+    var(--font-space-grotesk), sans-serif;
+
+  --primitive-font-family-inter:
+    var(--font-inter), sans-serif;
+
+  --primitive-font-family-ibm-plex-mono:
+    var(--font-ibm-plex-mono), monospace;
+}

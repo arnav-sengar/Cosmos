@@ -1,0 +1,44 @@
+/*
+ * COSMOS DESIGN SYSTEM
+ * Primitive Color Tokens
+ *
+ * These are raw color values.
+ * They must not contain semantic or component-specific meanings.
+ */
+
+/* ==========================================
+   NEUTRAL SCALE
+   ========================================== */
+
+:root {
+  --primitive-color-neutral-50: #F5F7FB;
+  --primitive-color-neutral-100: #EEF2F8;
+  --primitive-color-neutral-200: #D7DFEA;
+  --primitive-color-neutral-300: #B8C5D8;
+  --primitive-color-neutral-400: #8798B2;
+  --primitive-color-neutral-500: #64748B;
+  --primitive-color-neutral-600: #475569;
+  --primitive-color-neutral-700: #334155;
+  --primitive-color-neutral-800: #26354B;
+  --primitive-color-neutral-900: #141F32;
+  --primitive-color-neutral-950: #080D18;
+
+  /* ==========================================
+     BRAND COLOR ANCHORS
+     ========================================== */
+
+  --primitive-color-brand-celestial-blue: #8EBBFF;
+  --primitive-color-brand-azure: #62C5E8;
+  --primitive-color-brand-nebula: #A99BEF;
+  --primitive-color-brand-stellar-gold: #E7BD78;
+  --primitive-color-brand-aurora: #72D6A0;
+
+  /* ==========================================
+     STATUS COLOR ANCHORS
+     ========================================== */
+
+  --primitive-color-success-400: #72D6A0;
+  --primitive-color-warning-400: #F4C56A;
+  --primitive-color-error-400: #FF8B8B;
+  --primitive-color-information-400: #8EBBFF;
+}

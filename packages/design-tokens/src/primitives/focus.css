@@ -1,0 +1,25 @@
+
+/*
+ * COSMOS DESIGN SYSTEM
+ * Primitive Focus Tokens
+ *
+ * Raw focus indicator dimensions and styles.
+ */
+
+:root {
+  /* FOCUS INDICATOR WIDTH */
+
+  --primitive-focus-width: 2px;
+
+  /* FOCUS INDICATOR OFFSET */
+
+  --primitive-focus-offset: 2px;
+
+  /* FOCUS INDICATOR STYLE */
+
+  --primitive-focus-style: solid;
+
+  /* FOCUS INDICATOR RADIUS */
+
+  --primitive-focus-radius: 4px;
+}

@@ -1,8 +1,17 @@
-﻿/*
+﻿
+/*
  * COSMOS DESIGN SYSTEM
  * Canonical CSS entry point.
- *
- * Primitive, semantic, theme, component, domain,
- * experience and visualization styles will be
- * organized and imported through this file.
  */
+
+/* Primitive Tokens */
+@import "./primitives/colors.css";
+@import "./primitives/typography.css";
+@import "./primitives/spacing.css";
+@import "./primitives/sizing.css";
+@import "./primitives/shape.css";
+@import "./primitives/elevation.css";
+@import "./primitives/motion.css";
+@import "./primitives/responsive.css";
+@import "./primitives/opacity.css";
+@import "./primitives/focus.css";
