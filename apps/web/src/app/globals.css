@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "@cosmos/design-tokens/css";
 
 :root {
   --background: #ffffff;

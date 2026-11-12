@@ -14,6 +14,9 @@ importers:
 
   apps/web:
     dependencies:
+      '@cosmos/design-tokens':
+        specifier: workspace:*
+        version: link:../../packages/design-tokens
       next:
         specifier: 16.4.6
         version: 16.4.6(@babel/core@7.29.13)(@types/node@20.19.43)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
@@ -48,6 +51,8 @@ importers:
       typescript:
         specifier: ^5
         version: 5.9.3
+
+  packages/design-tokens: {}
 
 packages:
 
