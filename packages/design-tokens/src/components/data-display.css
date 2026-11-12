@@ -1,0 +1,85 @@
+﻿/*
+ * COSMOS DESIGN SYSTEM
+ * Component Tokens — Data Display
+ *
+ * Component-specific design decisions for structured information.
+ * All references resolve through semantic tokens.
+ */
+
+:root {
+  /* ==========================================
+     TABLE GEOMETRY
+     ========================================== */
+
+  --table-cell-padding-inline: var(--spacing-component-normal);
+  --table-cell-padding-block: var(--spacing-component-compact);
+
+  --table-header-padding-block: var(--spacing-component-normal);
+  --table-row-border-width: var(--shape-border-subtle);
+
+  /* ==========================================
+     TABLE APPEARANCE
+     ========================================== */
+
+  --table-background: var(--color-surface-primary);
+  --table-header-background: var(--color-surface-secondary);
+  --table-row-background: var(--color-surface-primary);
+  --table-row-background-hover: var(--color-surface-secondary);
+  --table-row-border: var(--color-border-subtle);
+
+  /* ==========================================
+     DATA DENSITY
+     ========================================== */
+
+  --data-density-compact-gap: var(--spacing-inline-tight);
+  --data-density-comfortable-gap: var(--spacing-component-normal);
+  --data-density-spacious-gap: var(--spacing-component-comfortable);
+
+  --data-density-compact-padding: var(--spacing-component-compact);
+  --data-density-comfortable-padding: var(--spacing-component-normal);
+  --data-density-spacious-padding: var(--spacing-component-comfortable);
+
+  /* ==========================================
+     DATA TYPOGRAPHY
+     ========================================== */
+
+  --data-primary-font-family: var(--typography-body-font-family);
+  --data-primary-font-size: var(--typography-body-font-size);
+
+  --data-secondary-font-family: var(--typography-body-small-font-family);
+  --data-secondary-font-size: var(--typography-body-small-font-size);
+
+  --data-technical-font-family: var(--typography-technical-font-family);
+  --data-technical-font-size: var(--typography-technical-font-size);
+
+  /* ==========================================
+     METRICS AND STATISTICS
+     ========================================== */
+
+  --metric-value-font-family: var(--typography-display-font-family);
+  --metric-value-font-size: var(--typography-h2-font-size);
+  --metric-label-font-family: var(--typography-body-small-font-family);
+  --metric-label-font-size: var(--typography-body-small-font-size);
+
+  /* ==========================================
+     AVATARS
+     ========================================== */
+
+  --avatar-size-sm: var(--sizing-icon-large);
+  --avatar-size-md: var(--sizing-icon-extra-large);
+
+  --avatar-radius: var(--shape-radius-circular);
+
+  /* ==========================================
+     DATA COLORS
+     ========================================== */
+
+  --data-text-primary: var(--color-text-primary);
+  --data-text-secondary: var(--color-text-secondary);
+  --data-text-tertiary: var(--color-text-tertiary);
+
+  --data-status-success: var(--color-status-success);
+  --data-status-warning: var(--color-status-warning);
+  --data-status-error: var(--color-status-error);
+  --data-status-information: var(--color-status-information);
+}

@@ -1,0 +1,73 @@
+﻿/*
+ * COSMOS DESIGN SYSTEM
+ * Component Tokens — Actions
+ *
+ * Component-specific design decisions for action controls.
+ * All references resolve through semantic tokens.
+ */
+
+:root {
+  /* ==========================================
+     BUTTON GEOMETRY
+     ========================================== */
+
+  --button-height-sm: var(--sizing-control-small);
+  --button-height-md: var(--sizing-control-standard);
+  --button-height-lg: var(--sizing-control-large);
+
+  --button-padding-inline-sm: var(--spacing-component-compact);
+  --button-padding-inline-md: var(--spacing-component-normal);
+  --button-padding-inline-lg: var(--spacing-component-comfortable);
+
+  --button-radius: var(--shape-radius-control);
+  --button-radius-pill: var(--shape-radius-pill);
+
+  /* ==========================================
+     PRIMARY BUTTON
+     ========================================== */
+
+  --button-primary-background: var(--color-interactive-primary);
+  --button-primary-background-hover: var(--color-interactive-primary-hover);
+  --button-primary-background-active: var(--color-interactive-primary-active);
+  --button-primary-foreground: var(--color-text-inverse);
+  --button-primary-background-disabled: var(--color-interactive-disabled);
+
+  /* ==========================================
+     SECONDARY BUTTON
+     ========================================== */
+
+  --button-secondary-background: var(--color-surface-secondary);
+  --button-secondary-background-hover: var(--color-surface-elevated);
+  --button-secondary-foreground: var(--color-text-primary);
+  --button-secondary-border: var(--color-border-default);
+  --button-secondary-border-hover: var(--color-border-strong);
+
+  /* ==========================================
+     TERTIARY BUTTON
+     ========================================== */
+
+  --button-tertiary-background: transparent;
+  --button-tertiary-background-hover: var(--color-surface-secondary);
+  --button-tertiary-foreground: var(--color-text-accent);
+
+  /* ==========================================
+     ICON BUTTONS
+     ========================================== */
+
+  --icon-button-size-sm: var(--sizing-control-small);
+  --icon-button-size-md: var(--sizing-control-standard);
+  --icon-button-size-lg: var(--sizing-control-large);
+
+  --icon-button-icon-sm: var(--sizing-icon-small);
+  --icon-button-icon-md: var(--sizing-icon-medium);
+  --icon-button-icon-lg: var(--sizing-icon-large);
+
+  --icon-button-radius: var(--shape-radius-control);
+
+  /* ==========================================
+     INTERACTION STATES
+     ========================================== */
+
+  --button-focus-ring-width: var(--focus-indicator-width);
+  --button-focus-ring-offset: var(--focus-indicator-offset);
+}

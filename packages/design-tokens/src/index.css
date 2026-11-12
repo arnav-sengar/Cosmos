@@ -1,5 +1,4 @@
-﻿
-/*
+﻿/*
  * COSMOS DESIGN SYSTEM
  * Canonical CSS entry point.
  */
@@ -15,6 +14,11 @@
 @import "./primitives/responsive.css";
 @import "./primitives/opacity.css";
 @import "./primitives/focus.css";
+
+/* Theme Mappings */
+@import "./themes/deep-space.css";
+@import "./themes/stellar-light.css";
+
 /* Semantic Tokens */
 @import "./semantic/colors.css";
 @import "./semantic/typography.css";
@@ -27,3 +31,12 @@
 @import "./semantic/reduced-motion.css";
 @import "./semantic/focus.css";
 @import "./semantic/interaction.css";
+
+/* Component Tokens */
+@import "./components/actions.css";
+@import "./components/forms.css";
+@import "./components/surfaces.css";
+@import "./components/navigation.css";
+@import "./components/feedback.css";
+@import "./components/overlays.css";
+@import "./components/data-display.css";

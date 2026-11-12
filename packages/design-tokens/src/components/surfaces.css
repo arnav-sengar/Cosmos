@@ -1,0 +1,70 @@
+﻿/*
+ * COSMOS DESIGN SYSTEM
+ * Component Tokens — Surfaces
+ *
+ * Component-specific design decisions for cards and panels.
+ * All references resolve through semantic tokens.
+ */
+
+:root {
+  /* ==========================================
+     CARD GEOMETRY
+     ========================================== */
+
+  --card-padding-sm: var(--spacing-component-normal);
+  --card-padding-md: var(--spacing-component-comfortable);
+  --card-padding-lg: var(--spacing-component-spacious);
+
+  --card-radius: var(--shape-radius-card);
+  --card-border-width: var(--shape-border-default);
+
+  /* ==========================================
+     CARD APPEARANCE
+     ========================================== */
+
+  --card-background: var(--color-surface-primary);
+  --card-background-secondary: var(--color-surface-secondary);
+  --card-border: var(--color-border-subtle);
+  --card-elevation: var(--elevation-raised);
+
+  /* ==========================================
+     INTERACTIVE CARDS
+     ========================================== */
+
+  --card-background-hover: var(--color-surface-elevated);
+  --card-border-hover: var(--color-border-default);
+  --card-elevation-hover: var(--elevation-floating);
+
+  --card-background-active: var(--color-surface-secondary);
+  --card-border-active: var(--color-border-strong);
+
+  --card-background-selected: var(--color-surface-elevated);
+  --card-border-selected: var(--color-border-accent);
+
+  /* ==========================================
+     PANEL GEOMETRY
+     ========================================== */
+
+  --panel-padding-sm: var(--spacing-component-comfortable);
+  --panel-padding-md: var(--spacing-content-normal);
+  --panel-padding-lg: var(--spacing-content-relaxed);
+
+  --panel-radius: var(--shape-radius-panel);
+  --panel-border-width: var(--shape-border-default);
+
+  /* ==========================================
+     PANEL APPEARANCE
+     ========================================== */
+
+  --panel-background: var(--color-surface-secondary);
+  --panel-border: var(--color-border-subtle);
+  --panel-elevation: var(--elevation-flat);
+
+  /* ==========================================
+     SURFACE CONTENT SPACING
+     ========================================== */
+
+  --surface-content-gap-sm: var(--spacing-component-compact);
+  --surface-content-gap-md: var(--spacing-component-normal);
+  --surface-content-gap-lg: var(--spacing-component-comfortable);
+}

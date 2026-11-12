@@ -1,0 +1,94 @@
+﻿/*
+ * COSMOS DESIGN SYSTEM
+ * Component Tokens — Overlays
+ *
+ * Component-specific design decisions for dialogs and floating layers.
+ * All references resolve through semantic tokens.
+ */
+
+:root {
+  /* ==========================================
+     DIALOG GEOMETRY
+     ========================================== */
+
+  --dialog-width-sm: var(--sizing-content-reading);
+  --dialog-width-md: var(--sizing-content-standard);
+  --dialog-width-lg: var(--sizing-content-wide);
+
+  --dialog-padding: var(--spacing-content-normal);
+  --dialog-radius: var(--shape-radius-dialog);
+  --dialog-border-width: var(--shape-border-default);
+
+  /* ==========================================
+     DIALOG APPEARANCE
+     ========================================== */
+
+  --dialog-background: var(--color-surface-overlay);
+  --dialog-foreground: var(--color-text-primary);
+  --dialog-border: var(--color-border-subtle);
+  --dialog-elevation: var(--elevation-overlay);
+
+  /* ==========================================
+     BACKDROP
+     ========================================== */
+
+  --overlay-backdrop-background: var(--color-background-canvas);
+
+  /* ==========================================
+     DRAWER GEOMETRY
+     ========================================== */
+
+  --drawer-width-min: var(--sizing-sidebar-min);
+  --drawer-width-max: var(--sizing-sidebar-max);
+
+  --drawer-padding: var(--spacing-content-normal);
+  --drawer-radius: var(--shape-radius-panel);
+
+  /* ==========================================
+     DRAWER APPEARANCE
+     ========================================== */
+
+  --drawer-background: var(--color-surface-overlay);
+  --drawer-border: var(--color-border-subtle);
+  --drawer-elevation: var(--elevation-overlay);
+
+  /* ==========================================
+     TOOLTIP GEOMETRY
+     ========================================== */
+
+  --tooltip-padding-inline: var(--spacing-component-compact);
+  --tooltip-padding-block: var(--spacing-inline-tight);
+  --tooltip-radius: var(--shape-radius-control);
+
+  /* ==========================================
+     TOOLTIP APPEARANCE
+     ========================================== */
+
+  --tooltip-background: var(--color-background-elevated);
+  --tooltip-foreground: var(--color-text-primary);
+  --tooltip-elevation: var(--elevation-floating);
+
+  /* ==========================================
+     POPOVER GEOMETRY
+     ========================================== */
+
+  --popover-padding: var(--spacing-component-comfortable);
+  --popover-radius: var(--shape-radius-card);
+  --popover-border-width: var(--shape-border-default);
+
+  /* ==========================================
+     POPOVER APPEARANCE
+     ========================================== */
+
+  --popover-background: var(--color-surface-elevated);
+  --popover-foreground: var(--color-text-primary);
+  --popover-border: var(--color-border-subtle);
+  --popover-elevation: var(--elevation-floating);
+
+  /* ==========================================
+     OVERLAY MOTION
+     ========================================== */
+
+  --overlay-transition-duration: var(--motion-duration-normal);
+  --overlay-transition-easing: var(--motion-easing-standard);
+}

@@ -1,5 +1,4 @@
-
-/*
+﻿/*
  * COSMOS DESIGN SYSTEM
  * Semantic Sizing Tokens
  *
@@ -13,76 +12,76 @@
      ========================================== */
 
   --sizing-content-reading:
-    var(--primitive-sizing-content-reading);
+    var(--primitive-size-reading-width);
 
   --sizing-content-standard:
-    var(--primitive-sizing-content-standard);
+    var(--primitive-size-container-standard);
 
   --sizing-content-wide:
-    var(--primitive-sizing-content-wide);
+    var(--primitive-size-container-wide);
 
   /* ==========================================
      SIDEBAR
      ========================================== */
 
   --sizing-sidebar-min:
-    var(--primitive-sizing-sidebar-min);
+    var(--primitive-size-sidebar-min);
 
   --sizing-sidebar-max:
-    var(--primitive-sizing-sidebar-max);
+    var(--primitive-size-sidebar-max);
 
   /* ==========================================
      CONTROLS
      ========================================== */
 
   --sizing-control-compact:
-    var(--primitive-sizing-control-compact);
+    var(--primitive-size-control-xs);
 
   --sizing-control-small:
-    var(--primitive-sizing-control-small);
+    var(--primitive-size-control-sm);
 
   --sizing-control-standard:
-    var(--primitive-sizing-control-standard);
+    var(--primitive-size-control-md);
 
   --sizing-control-large:
-    var(--primitive-sizing-control-large);
+    var(--primitive-size-control-lg);
 
   --sizing-control-extra-large:
-    var(--primitive-sizing-control-extra-large);
+    var(--primitive-size-control-xl);
 
   /* ==========================================
      INPUTS
      ========================================== */
 
   --sizing-input-compact:
-    var(--primitive-sizing-input-compact);
+    var(--primitive-size-input-sm);
 
   --sizing-input-standard:
-    var(--primitive-sizing-input-standard);
+    var(--primitive-size-input-md);
 
   --sizing-input-comfortable:
-    var(--primitive-sizing-input-comfortable);
+    var(--primitive-size-input-lg);
 
   /* ==========================================
      ICONS
      ========================================== */
 
   --sizing-icon-small:
-    var(--primitive-sizing-icon-small);
+    var(--primitive-size-icon-sm);
 
   --sizing-icon-medium:
-    var(--primitive-sizing-icon-medium);
+    var(--primitive-size-icon-md);
 
   --sizing-icon-large:
-    var(--primitive-sizing-icon-large);
+    var(--primitive-size-icon-lg);
 
   --sizing-icon-extra-large:
-    var(--primitive-sizing-icon-extra-large);
+    var(--primitive-size-icon-xl);
 
   /* ==========================================
      ACCESSIBILITY
      ========================================== */
 
   --sizing-interactive-target-min:
-    var(--primitive-sizing-target-min);
+    var(--primitive-size-target-min);
 }

@@ -1,0 +1,103 @@
+﻿/*
+ * COSMOS DESIGN SYSTEM
+ * Component Tokens — Forms
+ *
+ * Component-specific design decisions for form controls.
+ * All references resolve through semantic tokens.
+ */
+
+:root {
+   /* ==========================================
+     FIELD GEOMETRY
+     ========================================== */
+
+   --field-height-sm: var(--sizing-input-compact);
+   --field-height-md: var(--sizing-input-standard);
+   --field-height-lg: var(--sizing-input-comfortable);
+
+   --field-padding-inline: var(--spacing-component-normal);
+   --field-padding-block: var(--spacing-component-compact);
+
+   --field-radius: var(--shape-radius-control);
+   --field-border-width: var(--shape-border-default);
+
+   /* ==========================================
+     FIELD APPEARANCE
+     ========================================== */
+
+   --field-background: var(--color-surface-primary);
+   --field-background-disabled: var(--color-background-secondary);
+
+   --field-foreground: var(--color-text-primary);
+   --field-placeholder: var(--color-text-tertiary);
+
+   --field-border: var(--color-border-default);
+   --field-border-hover: var(--color-border-strong);
+   --field-border-focus: var(--color-interactive-primary);
+   --field-border-error: var(--color-status-error);
+   --field-border-success: var(--color-status-success);
+   --field-border-disabled: var(--color-border-subtle);
+   --choice-control-border-disabled: var(--color-interactive-disabled);
+
+   /* ==========================================
+     FIELD TYPOGRAPHY
+     ========================================== */
+
+   --field-font-family: var(--typography-body-font-family);
+   --field-font-size: var(--typography-body-font-size);
+   --field-line-height: var(--typography-body-line-height);
+
+   --field-label-font-family: var(--typography-body-small-font-family);
+   --field-label-font-size: var(--typography-body-small-font-size);
+   --field-label-font-weight: var(--typography-body-small-font-weight);
+
+   --field-helper-font-size: var(--typography-caption-font-size);
+
+   /* ==========================================
+     FIELD SPACING
+     ========================================== */
+
+   --field-label-gap: var(--spacing-inline-tight);
+   --field-helper-gap: var(--spacing-inline-tight);
+   --field-group-gap: var(--spacing-component-comfortable);
+
+   /* ==========================================
+     CHECKBOX AND RADIO
+     ========================================== */
+
+   --choice-control-size-sm: var(--sizing-icon-small);
+   --choice-control-size-md: var(--sizing-icon-medium);
+   --choice-control-size-lg: var(--sizing-icon-large);
+   --choice-control-target-size: var(--sizing-interactive-target-min);
+
+   --choice-control-radius: var(--shape-radius-control);
+   --choice-control-border: var(--color-border-default);
+   --choice-control-background: var(--color-surface-primary);
+   --choice-control-selected-background: var(--color-interactive-primary);
+   --choice-control-selected-foreground: var(--color-text-inverse);
+
+   /* ==========================================
+     SWITCH
+     ========================================== */
+
+   --switch-track-width: var(--sizing-control-large);
+   --switch-track-height: var(--sizing-control-small);
+   --switch-thumb-size: var(--sizing-icon-medium);
+   --switch-track-radius: var(--shape-radius-pill);
+   --switch-thumb-radius: var(--shape-radius-circular);
+   --switch-track-background: var(--color-surface-secondary);
+   --switch-track-background-checked: var(--color-interactive-primary);
+   --switch-track-background-disabled: var(--color-interactive-disabled);
+   --switch-thumb-background: var(--color-text-inverse);
+
+   /* ==========================================
+     FOCUS AND VALIDATION
+     ========================================== */
+
+   --field-focus-ring-width: var(--focus-indicator-width);
+   --field-focus-ring-offset: var(--focus-indicator-offset);
+
+   --field-error-foreground: var(--color-status-error);
+   --field-success-foreground: var(--color-status-success);
+   --field-disabled-foreground: var(--color-text-tertiary);
+}

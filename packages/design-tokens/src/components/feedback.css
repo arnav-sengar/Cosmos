@@ -1,0 +1,104 @@
+﻿/*
+ * COSMOS DESIGN SYSTEM
+ * Component Tokens — Feedback
+ *
+ * Component-specific design decisions for status and feedback elements.
+ * All references resolve through semantic tokens.
+ */
+
+:root {
+  /* ==========================================
+     BADGE GEOMETRY
+     ========================================== */
+
+  --badge-height-sm: var(--sizing-control-compact);
+  --badge-height-md: var(--sizing-control-small);
+
+  --badge-padding-inline: var(--spacing-inline-normal);
+  --badge-padding-block: var(--spacing-inline-tight);
+
+  --badge-radius: var(--shape-radius-pill);
+
+  /* ==========================================
+     BADGE TYPOGRAPHY
+     ========================================== */
+
+  --badge-font-family: var(--typography-body-small-font-family);
+  --badge-font-size: var(--typography-caption-font-size);
+  --badge-font-weight: var(--typography-body-small-font-weight);
+
+  /* ==========================================
+     STATUS COLORS
+     ========================================== */
+
+  --feedback-success: var(--color-status-success);
+  --feedback-warning: var(--color-status-warning);
+  --feedback-error: var(--color-status-error);
+  --feedback-information: var(--color-status-information);
+
+  /* ==========================================
+     ALERT GEOMETRY
+     ========================================== */
+
+  --alert-padding: var(--spacing-component-comfortable);
+  --alert-radius: var(--shape-radius-card);
+  --alert-border-width: var(--shape-border-default);
+  --alert-content-gap: var(--spacing-component-normal);
+
+  /* ==========================================
+     ALERT APPEARANCE
+     ========================================== */
+
+  --alert-background: var(--color-surface-secondary);
+  --alert-foreground: var(--color-text-primary);
+  --alert-border: var(--color-border-default);
+
+  --alert-success-border: var(--color-status-success);
+  --alert-warning-border: var(--color-status-warning);
+  --alert-error-border: var(--color-status-error);
+  --alert-information-border: var(--color-status-information);
+
+  /* ==========================================
+     PROGRESS INDICATORS
+     ========================================== */
+
+  --progress-track-height: var(--sizing-control-compact);
+  --progress-track-radius: var(--shape-radius-pill);
+  --progress-track-background: var(--color-surface-secondary);
+
+  --progress-fill-background: var(--color-interactive-primary);
+  --progress-fill-success: var(--color-status-success);
+  --progress-fill-warning: var(--color-status-warning);
+  --progress-fill-error: var(--color-status-error);
+
+  /* ==========================================
+     LOADING INDICATORS
+     ========================================== */
+
+  --loading-indicator-size-sm: var(--sizing-icon-small);
+  --loading-indicator-size-md: var(--sizing-icon-medium);
+  --loading-indicator-size-lg: var(--sizing-icon-large);
+
+  --loading-indicator-color: var(--color-interactive-primary);
+  --loading-indicator-duration: var(--motion-duration-slow);
+  --loading-indicator-easing: var(--motion-easing-linear);
+
+  /* ==========================================
+     STATUS INDICATORS
+     ========================================== */
+
+  --status-indicator-size-sm: var(--sizing-icon-small);
+  --status-indicator-size-md: var(--sizing-icon-medium);
+
+  --status-indicator-success: var(--color-status-success);
+  --status-indicator-warning: var(--color-status-warning);
+  --status-indicator-error: var(--color-status-error);
+  --status-indicator-information: var(--color-status-information);
+
+  /* ==========================================
+     FEEDBACK TRANSITIONS
+     ========================================== */
+
+  --feedback-transition-duration: var(--motion-duration-fast);
+  --feedback-transition-easing: var(--motion-easing-standard);
+}

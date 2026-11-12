@@ -1,0 +1,73 @@
+﻿/*
+ * COSMOS DESIGN SYSTEM
+ * Component Tokens — Navigation
+ *
+ * Component-specific design decisions for navigation elements.
+ * All references resolve through semantic tokens.
+ */
+
+:root {
+  /* ==========================================
+     SIDEBAR GEOMETRY
+     ========================================== */
+
+  --navigation-sidebar-width-min: var(--sizing-sidebar-min);
+  --navigation-sidebar-width-max: var(--sizing-sidebar-max);
+
+  --navigation-sidebar-padding: var(--spacing-component-normal);
+  --navigation-sidebar-section-gap: var(--spacing-content-normal);
+
+  /* ==========================================
+     NAVIGATION ITEM GEOMETRY
+     ========================================== */
+
+  --navigation-item-height: var(--sizing-control-large);
+  --navigation-item-padding-inline: var(--spacing-component-normal);
+  --navigation-item-gap: var(--spacing-inline-normal);
+  --navigation-item-radius: var(--shape-radius-control);
+  --navigation-item-target-size: var(--sizing-interactive-target-min);
+
+  /* ==========================================
+     NAVIGATION ITEM APPEARANCE
+     ========================================== */
+
+  --navigation-item-background: transparent;
+  --navigation-item-background-hover: var(--color-surface-secondary);
+  --navigation-item-background-active: var(--color-surface-elevated);
+  --navigation-item-background-selected: var(--color-surface-elevated);
+
+  --navigation-item-foreground: var(--color-text-secondary);
+  --navigation-item-foreground-hover: var(--color-text-primary);
+  --navigation-item-foreground-selected: var(--color-text-accent);
+
+  /* ==========================================
+     ACTIVE INDICATOR
+     ========================================== */
+
+  --navigation-indicator-width: var(--shape-border-emphasis);
+  --navigation-indicator-color: var(--color-brand-primary);
+  --navigation-indicator-radius: var(--shape-radius-pill);
+
+  /* ==========================================
+     NAVIGATION TYPOGRAPHY
+     ========================================== */
+
+  --navigation-item-font-family: var(--typography-body-font-family);
+  --navigation-item-font-size: var(--typography-body-small-font-size);
+  --navigation-item-font-weight: var(--typography-body-small-font-weight);
+
+  /* ==========================================
+     TABS
+     ========================================== */
+
+  --navigation-tab-height: var(--sizing-control-large);
+  --navigation-tab-padding-inline: var(--spacing-component-normal);
+  --navigation-tab-gap: var(--spacing-component-compact);
+
+  --navigation-tab-foreground: var(--color-text-secondary);
+  --navigation-tab-foreground-hover: var(--color-text-primary);
+  --navigation-tab-foreground-selected: var(--color-text-accent);
+
+  --navigation-tab-indicator-height: var(--shape-border-emphasis);
+  --navigation-tab-indicator-color: var(--color-brand-primary);
+}
