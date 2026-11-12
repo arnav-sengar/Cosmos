@@ -1,0 +1,45 @@
+
+# Dependencies
+**/node_modules/
+.pnpm-store/
+
+# Build outputs
+**/.next/
+**/out/
+**/build/
+**/dist/
+**/.turbo/
+coverage/
+
+# Environment variables
+.env*
+!.env.example
+!.env.*.example
+
+# Deployment
+.vercel/
+
+# TypeScript
+*.tsbuildinfo
+**/next-env.d.ts
+
+# Testing
+**/playwright-report/
+**/test-results/
+
+# Logs
+*.log
+
+# Operating system
+.DS_Store
+Thumbs.db
+
+# Certificates and private keys
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Editors
+.idea/
+.vscode/
