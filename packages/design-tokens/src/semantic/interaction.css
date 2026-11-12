@@ -1,0 +1,21 @@
+
+/*
+ * COSMOS DESIGN SYSTEM
+ * Semantic Interaction Tokens
+ *
+ * Standard interaction states used across components.
+ * These tokens define state behavior, not component appearance.
+ */
+
+:root {
+  /* ==========================================
+     INTERACTION STATES
+     ========================================== */
+
+  --interaction-state-default: default;
+  --interaction-state-hover: hover;
+  --interaction-state-focus-visible: focus-visible;
+  --interaction-state-active: active;
+  --interaction-state-disabled: disabled;
+  --interaction-state-loading: loading;
+}

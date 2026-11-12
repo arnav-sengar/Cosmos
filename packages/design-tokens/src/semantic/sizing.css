@@ -1,0 +1,88 @@
+
+/*
+ * COSMOS DESIGN SYSTEM
+ * Semantic Sizing Tokens
+ *
+ * Meaningful dimensions used throughout the platform.
+ * All values reference primitive sizing tokens.
+ */
+
+:root {
+  /* ==========================================
+     CONTENT WIDTHS
+     ========================================== */
+
+  --sizing-content-reading:
+    var(--primitive-sizing-content-reading);
+
+  --sizing-content-standard:
+    var(--primitive-sizing-content-standard);
+
+  --sizing-content-wide:
+    var(--primitive-sizing-content-wide);
+
+  /* ==========================================
+     SIDEBAR
+     ========================================== */
+
+  --sizing-sidebar-min:
+    var(--primitive-sizing-sidebar-min);
+
+  --sizing-sidebar-max:
+    var(--primitive-sizing-sidebar-max);
+
+  /* ==========================================
+     CONTROLS
+     ========================================== */
+
+  --sizing-control-compact:
+    var(--primitive-sizing-control-compact);
+
+  --sizing-control-small:
+    var(--primitive-sizing-control-small);
+
+  --sizing-control-standard:
+    var(--primitive-sizing-control-standard);
+
+  --sizing-control-large:
+    var(--primitive-sizing-control-large);
+
+  --sizing-control-extra-large:
+    var(--primitive-sizing-control-extra-large);
+
+  /* ==========================================
+     INPUTS
+     ========================================== */
+
+  --sizing-input-compact:
+    var(--primitive-sizing-input-compact);
+
+  --sizing-input-standard:
+    var(--primitive-sizing-input-standard);
+
+  --sizing-input-comfortable:
+    var(--primitive-sizing-input-comfortable);
+
+  /* ==========================================
+     ICONS
+     ========================================== */
+
+  --sizing-icon-small:
+    var(--primitive-sizing-icon-small);
+
+  --sizing-icon-medium:
+    var(--primitive-sizing-icon-medium);
+
+  --sizing-icon-large:
+    var(--primitive-sizing-icon-large);
+
+  --sizing-icon-extra-large:
+    var(--primitive-sizing-icon-extra-large);
+
+  /* ==========================================
+     ACCESSIBILITY
+     ========================================== */
+
+  --sizing-interactive-target-min:
+    var(--primitive-sizing-target-min);
+}

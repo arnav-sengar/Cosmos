@@ -1,0 +1,51 @@
+
+/*
+ * COSMOS DESIGN SYSTEM
+ * Semantic Shape Tokens
+ *
+ * Meaningful geometry roles used throughout the platform.
+ * All values reference primitive shape tokens.
+ */
+
+:root {
+  /* ==========================================
+     BORDER RADIUS
+     ========================================== */
+
+  --shape-radius-control:
+    var(--primitive-radius-2);
+
+  --shape-radius-card:
+    var(--primitive-radius-3);
+
+  --shape-radius-panel:
+    var(--primitive-radius-4);
+
+  --shape-radius-dialog:
+    var(--primitive-radius-5);
+
+  --shape-radius-pill:
+    var(--primitive-radius-full);
+
+  --shape-radius-circular:
+    var(--primitive-radius-full);
+
+  /* ==========================================
+     BORDER WIDTH
+     ========================================== */
+
+  --shape-border-none:
+    var(--primitive-border-width-none);
+
+  --shape-border-subtle:
+    var(--primitive-border-width-thin);
+
+  --shape-border-default:
+    var(--primitive-border-width-thin);
+
+  --shape-border-strong:
+    var(--primitive-border-width-medium);
+
+  --shape-border-emphasis:
+    var(--primitive-border-width-thick);
+}

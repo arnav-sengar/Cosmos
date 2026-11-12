@@ -1,0 +1,51 @@
+
+/*
+ * COSMOS DESIGN SYSTEM
+ * Semantic Motion Tokens
+ *
+ * Meaningful motion roles used throughout the platform.
+ * All values reference primitive motion tokens.
+ */
+
+:root {
+  /* ==========================================
+     MOTION DURATIONS
+     ========================================== */
+
+  --motion-duration-instant:
+    var(--primitive-duration-instant);
+
+  --motion-duration-fast:
+    var(--primitive-duration-fast);
+
+  --motion-duration-normal:
+    var(--primitive-duration-normal);
+
+  --motion-duration-slow:
+    var(--primitive-duration-slow);
+
+  --motion-duration-deliberate:
+    var(--primitive-duration-deliberate);
+
+  --motion-duration-reduced:
+    var(--primitive-duration-reduced);
+
+  /* ==========================================
+     MOTION EASING
+     ========================================== */
+
+  --motion-easing-linear:
+    var(--primitive-easing-linear);
+
+  --motion-easing-standard:
+    var(--primitive-easing-standard);
+
+  --motion-easing-decelerate:
+    var(--primitive-easing-decelerate);
+
+  --motion-easing-accelerate:
+    var(--primitive-easing-accelerate);
+
+  --motion-easing-emphasized:
+    var(--primitive-easing-emphasized);
+}

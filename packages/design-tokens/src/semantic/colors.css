@@ -1,0 +1,114 @@
+
+/*
+ * COSMOS DESIGN SYSTEM
+ * Semantic Color Tokens
+ *
+ * Stable color meanings consumed by the application.
+ * Actual values are supplied by theme mappings.
+ */
+
+:root {
+  /* BACKGROUND COLORS */
+
+  --color-background-canvas:
+    var(--theme-color-background-canvas);
+
+  --color-background-primary:
+    var(--theme-color-background-primary);
+
+  --color-background-secondary:
+    var(--theme-color-background-secondary);
+
+  --color-background-elevated:
+    var(--theme-color-background-elevated);
+
+  /* SURFACE COLORS */
+
+  --color-surface-primary:
+    var(--theme-color-surface-primary);
+
+  --color-surface-secondary:
+    var(--theme-color-surface-secondary);
+
+  --color-surface-elevated:
+    var(--theme-color-surface-elevated);
+
+  --color-surface-overlay:
+    var(--theme-color-surface-overlay);
+
+  /* TEXT COLORS */
+
+  --color-text-primary:
+    var(--theme-color-text-primary);
+
+  --color-text-secondary:
+    var(--theme-color-text-secondary);
+
+  --color-text-tertiary:
+    var(--theme-color-text-tertiary);
+
+  --color-text-inverse:
+    var(--theme-color-text-inverse);
+
+  --color-text-accent:
+    var(--theme-color-text-accent);
+
+  /* BORDER COLORS */
+
+  --color-border-subtle:
+    var(--theme-color-border-subtle);
+
+  --color-border-default:
+    var(--theme-color-border-default);
+
+  --color-border-strong:
+    var(--theme-color-border-strong);
+
+  --color-border-accent:
+    var(--theme-color-border-accent);
+
+  /* BRAND COLORS */
+
+  --color-brand-primary:
+    var(--theme-color-brand-primary);
+
+  --color-brand-secondary:
+    var(--theme-color-brand-secondary);
+
+  --color-brand-tertiary:
+    var(--theme-color-brand-tertiary);
+
+  --color-brand-highlight:
+    var(--theme-color-brand-highlight);
+
+  --color-brand-aurora:
+    var(--theme-color-brand-aurora);
+
+  /* INTERACTIVE COLORS */
+
+  --color-interactive-primary:
+    var(--theme-color-interactive-primary);
+
+  --color-interactive-primary-hover:
+    var(--theme-color-interactive-primary-hover);
+
+  --color-interactive-primary-active:
+    var(--theme-color-interactive-primary-active);
+
+  --color-interactive-disabled:
+    var(--theme-color-interactive-disabled);
+
+  /* STATUS COLORS */
+
+  --color-status-success:
+    var(--theme-color-status-success);
+
+  --color-status-warning:
+    var(--theme-color-status-warning);
+
+  --color-status-error:
+    var(--theme-color-status-error);
+
+  --color-status-information:
+    var(--theme-color-status-information);
+}

@@ -1,0 +1,23 @@
+/*
+ * COSMOS DESIGN SYSTEM
+ * Reduced Motion Tokens
+ *
+ * Accessibility overrides for users who prefer reduced motion.
+ * Respects the operating-system accessibility preference.
+ */
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion-duration-fast:
+      var(--motion-duration-reduced);
+
+    --motion-duration-normal:
+      var(--motion-duration-reduced);
+
+    --motion-duration-slow:
+      var(--motion-duration-reduced);
+
+    --motion-duration-deliberate:
+      var(--motion-duration-reduced);
+  }
+}

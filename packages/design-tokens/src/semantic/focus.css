@@ -1,0 +1,26 @@
+
+/*
+ * COSMOS DESIGN SYSTEM
+ * Semantic Focus Tokens
+ *
+ * Accessible focus indicator roles.
+ * All dimensions reference primitive focus tokens.
+ */
+
+:root {
+  /* ==========================================
+     FOCUS INDICATOR
+     ========================================== */
+
+  --focus-indicator-width:
+    var(--primitive-focus-width);
+
+  --focus-indicator-offset:
+    var(--primitive-focus-offset);
+
+  --focus-indicator-style:
+    var(--primitive-focus-style);
+
+  --focus-indicator-radius:
+    var(--primitive-focus-radius);
+}

@@ -1,0 +1,33 @@
+
+/*
+ * COSMOS DESIGN SYSTEM
+ * Semantic Elevation Tokens
+ *
+ * Meaningful depth roles used throughout the platform.
+ * All values reference primitive elevation tokens.
+ */
+
+:root {
+  /* ==========================================
+     SURFACE ELEVATION
+     ========================================== */
+
+  --elevation-flat:
+    var(--primitive-elevation-0);
+
+  --elevation-raised:
+    var(--primitive-elevation-1);
+
+  --elevation-floating:
+    var(--primitive-elevation-2);
+
+  --elevation-overlay:
+    var(--primitive-elevation-3);
+
+  /* ==========================================
+     INSET ELEVATION
+     ========================================== */
+
+  --elevation-inset:
+    var(--primitive-elevation-inset);
+}

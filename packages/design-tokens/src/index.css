@@ -15,3 +15,15 @@
 @import "./primitives/responsive.css";
 @import "./primitives/opacity.css";
 @import "./primitives/focus.css";
+/* Semantic Tokens */
+@import "./semantic/colors.css";
+@import "./semantic/typography.css";
+@import "./semantic/responsive-typography.css";
+@import "./semantic/spacing.css";
+@import "./semantic/sizing.css";
+@import "./semantic/shape.css";
+@import "./semantic/elevation.css";
+@import "./semantic/motion.css";
+@import "./semantic/reduced-motion.css";
+@import "./semantic/focus.css";
+@import "./semantic/interaction.css";

@@ -1,0 +1,110 @@
+/*
+ * COSMOS DESIGN SYSTEM
+ * Stellar Light Theme
+ *
+ * Alternative light theme color mappings.
+ * All values reference primitive color tokens.
+ */
+
+:root[data-theme="stellar-light"] {
+
+    /* BACKGROUNDS */
+
+    --theme-color-background-canvas:
+        var(--primitive-color-neutral-50);
+
+    --theme-color-background-primary:
+        var(--primitive-color-neutral-0);
+
+    --theme-color-background-secondary:
+        var(--primitive-color-neutral-100);
+
+    --theme-color-background-elevated:
+        var(--primitive-color-neutral-0);
+
+
+    /* SURFACES */
+
+    --theme-color-surface-primary:
+        var(--primitive-color-neutral-0);
+
+    --theme-color-surface-secondary:
+        var(--primitive-color-neutral-50);
+
+    --theme-color-surface-elevated:
+        var(--primitive-color-neutral-100);
+
+    --theme-color-surface-overlay:
+        var(--primitive-color-neutral-0);
+
+
+    /* TEXT */
+
+    --theme-color-text-primary:
+        var(--primitive-color-neutral-900);
+
+    --theme-color-text-secondary:
+        var(--primitive-color-neutral-700);
+
+    --theme-color-text-tertiary:
+        var(--primitive-color-neutral-600);
+
+    --theme-color-text-inverse:
+        var(--primitive-color-neutral-0);
+
+    --theme-color-text-accent:
+        var(--primitive-color-information-700);
+
+
+    /* BORDERS */
+
+    --theme-color-border-subtle:
+        var(--primitive-color-neutral-100);
+
+    --theme-color-border-default:
+        var(--primitive-color-neutral-200);
+
+    --theme-color-border-strong:
+        var(--primitive-color-neutral-400);
+
+    --theme-color-border-accent:
+        var(--primitive-color-information-700);
+
+
+    /* BRAND */
+    --theme-color-brand-primary: var(--primitive-color-brand-celestial-blue-700);
+    --theme-color-brand-secondary: var(--primitive-color-brand-azure-700);
+    --theme-color-brand-tertiary: var(--primitive-color-brand-nebula-700);
+    --theme-color-brand-highlight: var(--primitive-color-brand-stellar-gold-700);
+    --theme-color-brand-aurora: var(--primitive-color-brand-aurora-700);
+
+
+    /* INTERACTIVE */
+
+    --theme-color-interactive-primary:
+        var(--primitive-color-information-700);
+
+    --theme-color-interactive-primary-hover:
+        var(--primitive-color-neutral-700);
+
+    --theme-color-interactive-primary-active:
+        var(--primitive-color-neutral-800);
+
+    --theme-color-interactive-disabled:
+        var(--primitive-color-neutral-200);
+
+
+    /* STATUS */
+
+    --theme-color-status-success:
+        var(--primitive-color-success-700);
+
+    --theme-color-status-warning:
+        var(--primitive-color-warning-700);
+
+    --theme-color-status-error:
+        var(--primitive-color-error-700);
+
+    --theme-color-status-information:
+        var(--primitive-color-information-700);
+}

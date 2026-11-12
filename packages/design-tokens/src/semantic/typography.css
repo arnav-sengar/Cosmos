@@ -1,0 +1,100 @@
+
+/*
+ * COSMOS DESIGN SYSTEM
+ * Semantic Typography Tokens
+ *
+ * Typography roles used throughout the Cosmos platform.
+ * Shared across all visual themes.
+ */
+
+:root {
+  /* ==========================================
+     DISPLAY
+     ========================================== */
+
+  --typography-display-font-family:
+    var(--primitive-font-family-space-grotesk);
+  --typography-display-font-size: 4rem;
+  --typography-display-font-weight: 700;
+  --typography-display-line-height: 1.15;
+  --typography-display-letter-spacing: -0.035em;
+
+  /* ==========================================
+     HEADINGS
+     ========================================== */
+
+  --typography-h1-font-family:
+    var(--primitive-font-family-space-grotesk);
+  --typography-h1-font-size: 3rem;
+  --typography-h1-font-weight: 700;
+  --typography-h1-line-height: 1.2;
+  --typography-h1-letter-spacing: -0.025em;
+
+  --typography-h2-font-family:
+    var(--primitive-font-family-space-grotesk);
+  --typography-h2-font-size: 2.25rem;
+  --typography-h2-font-weight: 600;
+  --typography-h2-line-height: 1.2;
+  --typography-h2-letter-spacing: -0.02em;
+
+  --typography-h3-font-family:
+    var(--primitive-font-family-space-grotesk);
+  --typography-h3-font-size: 1.75rem;
+  --typography-h3-font-weight: 600;
+  --typography-h3-line-height: 1.25;
+  --typography-h3-letter-spacing: -0.015em;
+
+  --typography-h4-font-family:
+    var(--primitive-font-family-space-grotesk);
+  --typography-h4-font-size: 1.375rem;
+  --typography-h4-font-weight: 600;
+  --typography-h4-line-height: 1.3;
+  --typography-h4-letter-spacing: -0.01em;
+
+  /* ==========================================
+     BODY
+     ========================================== */
+
+  --typography-body-large-font-family:
+    var(--primitive-font-family-inter);
+  --typography-body-large-font-size: 1.125rem;
+  --typography-body-large-font-weight: 400;
+  --typography-body-large-line-height: 1.6;
+  --typography-body-large-letter-spacing: 0;
+
+  --typography-body-font-family:
+    var(--primitive-font-family-inter);
+  --typography-body-font-size: 1rem;
+  --typography-body-font-weight: 400;
+  --typography-body-line-height: 1.6;
+  --typography-body-letter-spacing: 0;
+
+  --typography-body-small-font-family:
+    var(--primitive-font-family-inter);
+  --typography-body-small-font-size: 0.875rem;
+  --typography-body-small-font-weight: 400;
+  --typography-body-small-line-height: 1.5;
+  --typography-body-small-letter-spacing: 0;
+
+  /* ==========================================
+     SUPPORTING TEXT
+     ========================================== */
+
+  --typography-caption-font-family:
+    var(--primitive-font-family-inter);
+  --typography-caption-font-size: 0.75rem;
+  --typography-caption-font-weight: 400;
+  --typography-caption-line-height: 1.4;
+  --typography-caption-letter-spacing: 0.01em;
+
+  /* ==========================================
+     TECHNICAL / SCIENTIFIC
+     ========================================== */
+
+  --typography-technical-font-family:
+    var(--primitive-font-family-ibm-plex-mono);
+  --typography-technical-font-size: 0.875rem;
+  --typography-technical-font-weight: 400;
+  --typography-technical-line-height: 1.5;
+  --typography-technical-letter-spacing: 0;
+}

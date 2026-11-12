@@ -11,34 +11,56 @@
    ========================================== */
 
 :root {
-  --primitive-color-neutral-50: #F5F7FB;
-  --primitive-color-neutral-100: #EEF2F8;
-  --primitive-color-neutral-200: #D7DFEA;
-  --primitive-color-neutral-300: #B8C5D8;
-  --primitive-color-neutral-400: #8798B2;
-  --primitive-color-neutral-500: #64748B;
-  --primitive-color-neutral-600: #475569;
-  --primitive-color-neutral-700: #334155;
-  --primitive-color-neutral-800: #26354B;
-  --primitive-color-neutral-900: #141F32;
-  --primitive-color-neutral-950: #080D18;
+   --primitive-color-neutral-0: #FFFFFF;
+   --primitive-color-neutral-50: #F5F7FB;
+   --primitive-color-neutral-100: #EEF2F8;
+   --primitive-color-neutral-200: #D7DFEA;
+   --primitive-color-neutral-300: #B8C5D8;
+   --primitive-color-neutral-400: #8798B2;
+   --primitive-color-neutral-500: #64748B;
+   --primitive-color-neutral-600: #475569;
+   --primitive-color-neutral-700: #334155;
+   --primitive-color-neutral-800: #26354B;
+   --primitive-color-neutral-900: #141F32;
+   --primitive-color-neutral-925: #0E1626;
+   --primitive-color-neutral-950: #080D18;
 
-  /* ==========================================
+   /* ==========================================
      BRAND COLOR ANCHORS
      ========================================== */
 
-  --primitive-color-brand-celestial-blue: #8EBBFF;
-  --primitive-color-brand-azure: #62C5E8;
-  --primitive-color-brand-nebula: #A99BEF;
-  --primitive-color-brand-stellar-gold: #E7BD78;
-  --primitive-color-brand-aurora: #72D6A0;
+   --primitive-color-brand-celestial-blue: #8EBBFF;
+   --primitive-color-brand-azure: #62C5E8;
+   --primitive-color-brand-nebula: #A99BEF;
+   --primitive-color-brand-stellar-gold: #E7BD78;
+   --primitive-color-brand-aurora: #72D6A0;
 
-  /* ==========================================
-     STATUS COLOR ANCHORS
-     ========================================== */
+   /* ACCESSIBLE LIGHT-THEME BRAND ANCHORS */
 
-  --primitive-color-success-400: #72D6A0;
-  --primitive-color-warning-400: #F4C56A;
-  --primitive-color-error-400: #FF8B8B;
-  --primitive-color-information-400: #8EBBFF;
+   --primitive-color-brand-celestial-blue-700: #556F98;
+   --primitive-color-brand-azure-700: #3B768B;
+   --primitive-color-brand-nebula-700: #71679F;
+   --primitive-color-brand-stellar-gold-700: #836B44;
+   --primitive-color-brand-aurora-700: #41795B;
+
+
+   /* ==========================================
+   STATUS COLOR ANCHORS
+   ========================================== */
+
+   /* Dark-theme status anchors */
+
+   --primitive-color-success-400: #72D6A0;
+   --primitive-color-warning-400: #F4C56A;
+   --primitive-color-error-400: #FF8B8B;
+   --primitive-color-information-400: #8EBBFF;
+
+   /* Light-theme status anchors */
+
+   --primitive-color-success-700: #16794B;
+   --primitive-color-warning-700: #8A5A00;
+   --primitive-color-error-700: #B42332;
+   --primitive-color-information-700: #245CA8;
+
+
 }

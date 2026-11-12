@@ -1,0 +1,54 @@
+
+/*
+ * COSMOS DESIGN SYSTEM
+ * Semantic Spacing Tokens
+ *
+ * Meaningful spacing roles used throughout the platform.
+ * All values reference primitive spacing tokens.
+ */
+
+:root {
+  /* ==========================================
+     INLINE SPACING
+     ========================================== */
+
+  --spacing-inline-tight: var(--primitive-spacing-1);
+  --spacing-inline-normal: var(--primitive-spacing-2);
+  --spacing-inline-comfortable: var(--primitive-spacing-3);
+
+  /* ==========================================
+     COMPONENT SPACING
+     ========================================== */
+
+  --spacing-component-compact: var(--primitive-spacing-2);
+  --spacing-component-normal: var(--primitive-spacing-4);
+  --spacing-component-comfortable: var(--primitive-spacing-6);
+  --spacing-component-spacious: var(--primitive-spacing-8);
+
+  /* ==========================================
+     CONTENT SPACING
+     ========================================== */
+
+  --spacing-content-tight: var(--primitive-spacing-3);
+  --spacing-content-normal: var(--primitive-spacing-6);
+  --spacing-content-relaxed: var(--primitive-spacing-8);
+  --spacing-content-spacious: var(--primitive-spacing-12);
+
+  /* ==========================================
+     SECTION SPACING
+     ========================================== */
+
+  --spacing-section-compact: var(--primitive-spacing-8);
+  --spacing-section-normal: var(--primitive-spacing-12);
+  --spacing-section-large: var(--primitive-spacing-16);
+  --spacing-section-extra-large: var(--primitive-spacing-20);
+
+  /* ==========================================
+     LAYOUT SPACING
+     ========================================== */
+
+  --spacing-layout-compact: var(--primitive-spacing-4);
+  --spacing-layout-normal: var(--primitive-spacing-8);
+  --spacing-layout-comfortable: var(--primitive-spacing-12);
+  --spacing-layout-spacious: var(--primitive-spacing-16);
+}

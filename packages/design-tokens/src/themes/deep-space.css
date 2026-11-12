@@ -1,0 +1,114 @@
+
+/*
+ * COSMOS DESIGN SYSTEM
+ * Deep Space Theme
+ *
+ * Primary dark theme color mappings.
+ */
+
+:root[data-theme="deep-space"] {
+
+  /* BACKGROUNDS */
+
+  --theme-color-background-canvas:
+    var(--primitive-color-neutral-950);
+
+  --theme-color-background-primary:
+    var(--primitive-color-neutral-950);
+
+  --theme-color-background-secondary:
+    var(--primitive-color-neutral-925);
+
+  --theme-color-background-elevated:
+    var(--primitive-color-neutral-900);
+
+  /* SURFACES */
+
+  --theme-color-surface-primary:
+    var(--primitive-color-neutral-925);
+
+  --theme-color-surface-secondary:
+    var(--primitive-color-neutral-900);
+
+  --theme-color-surface-elevated:
+    var(--primitive-color-neutral-800);
+
+  --theme-color-surface-overlay:
+    var(--primitive-color-neutral-950);
+
+  /* TEXT */
+
+  --theme-color-text-primary:
+    var(--primitive-color-neutral-50);
+
+  --theme-color-text-secondary:
+    var(--primitive-color-neutral-300);
+
+  --theme-color-text-tertiary:
+    var(--primitive-color-neutral-400);
+
+  --theme-color-text-inverse:
+    var(--primitive-color-neutral-950);
+
+  --theme-color-text-accent:
+    var(--primitive-color-brand-celestial-blue);
+
+  /* BORDERS */
+
+  --theme-color-border-subtle:
+    var(--primitive-color-neutral-800);
+
+  --theme-color-border-default:
+    var(--primitive-color-neutral-700);
+
+  --theme-color-border-strong:
+    var(--primitive-color-neutral-500);
+
+  --theme-color-border-accent:
+    var(--primitive-color-brand-celestial-blue);
+
+  /* BRAND */
+
+  --theme-color-brand-primary:
+    var(--primitive-color-brand-celestial-blue);
+
+  --theme-color-brand-secondary:
+    var(--primitive-color-brand-azure);
+
+  --theme-color-brand-tertiary:
+    var(--primitive-color-brand-nebula);
+
+  --theme-color-brand-highlight:
+    var(--primitive-color-brand-stellar-gold);
+
+  --theme-color-brand-aurora:
+    var(--primitive-color-brand-aurora);
+
+  /* INTERACTIVE */
+
+  --theme-color-interactive-primary:
+    var(--primitive-color-brand-celestial-blue);
+
+  --theme-color-interactive-primary-hover:
+    var(--primitive-color-brand-azure);
+
+  --theme-color-interactive-primary-active:
+    var(--primitive-color-brand-nebula);
+
+  --theme-color-interactive-disabled:
+    var(--primitive-color-neutral-700);
+
+  /* STATUS */
+
+  --theme-color-status-success:
+    var(--primitive-color-success-400);
+
+  --theme-color-status-warning:
+    var(--primitive-color-warning-400);
+
+  --theme-color-status-error:
+    var(--primitive-color-error-400);
+
+  --theme-color-status-information:
+    var(--primitive-color-information-400);
+}
