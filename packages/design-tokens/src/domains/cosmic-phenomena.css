@@ -1,0 +1,128 @@
+/*
+ * COSMOS DESIGN SYSTEM
+ * Cosmic Phenomena — Domain Tokens
+ *
+ * Covers:
+ * Stellar & Explosive Events
+ * Orbital & Planetary Phenomena
+ * High-Energy & Relativistic Phenomena
+ * Solar & Space Weather
+ */
+
+/* ==========================================
+   DEEP SPACE THEME
+   ========================================== */
+
+:root[data-theme="deep-space"] {
+
+  /* STELLAR & EXPLOSIVE EVENTS */
+
+  --domain-stellar-events-identity:
+    var(--primitive-color-domain-supernova-orange);
+  --domain-stellar-events-accent:
+    var(--primitive-color-brand-stellar-gold);
+  --domain-stellar-events-surface:
+    var(--primitive-color-neutral-900);
+  --domain-stellar-events-border:
+    var(--primitive-color-domain-supernova-orange);
+  --domain-stellar-events-visualization:
+    var(--primitive-color-domain-supernova-orange);
+
+  /* ORBITAL & PLANETARY PHENOMENA */
+
+  --domain-orbital-phenomena-identity:
+    var(--primitive-color-domain-celestial-turquoise);
+  --domain-orbital-phenomena-accent:
+    var(--primitive-color-brand-azure);
+  --domain-orbital-phenomena-surface:
+    var(--primitive-color-neutral-900);
+  --domain-orbital-phenomena-border:
+    var(--primitive-color-domain-celestial-turquoise);
+  --domain-orbital-phenomena-visualization:
+    var(--primitive-color-domain-celestial-turquoise);
+
+  /* HIGH-ENERGY & RELATIVISTIC PHENOMENA */
+
+  --domain-high-energy-identity:
+    var(--primitive-color-domain-electric-indigo);
+  --domain-high-energy-accent:
+    var(--primitive-color-brand-celestial-blue);
+  --domain-high-energy-surface:
+    var(--primitive-color-neutral-900);
+  --domain-high-energy-border:
+    var(--primitive-color-domain-electric-indigo);
+  --domain-high-energy-visualization:
+    var(--primitive-color-domain-electric-indigo);
+
+  /* SOLAR & SPACE WEATHER */
+
+  --domain-space-weather-identity:
+    var(--primitive-color-domain-solar-coral);
+  --domain-space-weather-accent:
+    var(--primitive-color-brand-stellar-gold);
+  --domain-space-weather-surface:
+    var(--primitive-color-neutral-900);
+  --domain-space-weather-border:
+    var(--primitive-color-domain-solar-coral);
+  --domain-space-weather-visualization:
+    var(--primitive-color-domain-solar-coral);
+}
+
+/* ==========================================
+   STELLAR LIGHT THEME
+   ========================================== */
+
+:root[data-theme="stellar-light"] {
+
+  /* STELLAR & EXPLOSIVE EVENTS */
+
+  --domain-stellar-events-identity:
+    var(--primitive-color-domain-supernova-orange-700);
+  --domain-stellar-events-accent:
+    var(--primitive-color-brand-stellar-gold-700);
+  --domain-stellar-events-surface:
+    var(--primitive-color-neutral-100);
+  --domain-stellar-events-border:
+    var(--primitive-color-domain-supernova-orange-700);
+  --domain-stellar-events-visualization:
+    var(--primitive-color-domain-supernova-orange-700);
+
+  /* ORBITAL & PLANETARY PHENOMENA */
+
+  --domain-orbital-phenomena-identity:
+    var(--primitive-color-domain-celestial-turquoise-700);
+  --domain-orbital-phenomena-accent:
+    var(--primitive-color-brand-azure-700);
+  --domain-orbital-phenomena-surface:
+    var(--primitive-color-neutral-100);
+  --domain-orbital-phenomena-border:
+    var(--primitive-color-domain-celestial-turquoise-700);
+  --domain-orbital-phenomena-visualization:
+    var(--primitive-color-domain-celestial-turquoise-700);
+
+  /* HIGH-ENERGY & RELATIVISTIC PHENOMENA */
+
+  --domain-high-energy-identity:
+    var(--primitive-color-domain-electric-indigo-700);
+  --domain-high-energy-accent:
+    var(--primitive-color-brand-celestial-blue-700);
+  --domain-high-energy-surface:
+    var(--primitive-color-neutral-100);
+  --domain-high-energy-border:
+    var(--primitive-color-domain-electric-indigo-700);
+  --domain-high-energy-visualization:
+    var(--primitive-color-domain-electric-indigo-700);
+
+  /* SOLAR & SPACE WEATHER */
+
+  --domain-space-weather-identity:
+    var(--primitive-color-domain-solar-coral-700);
+  --domain-space-weather-accent:
+    var(--primitive-color-brand-stellar-gold-700);
+  --domain-space-weather-surface:
+    var(--primitive-color-neutral-100);
+  --domain-space-weather-border:
+    var(--primitive-color-domain-solar-coral-700);
+  --domain-space-weather-visualization:
+    var(--primitive-color-domain-solar-coral-700);
+}

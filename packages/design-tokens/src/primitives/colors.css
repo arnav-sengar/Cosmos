@@ -33,9 +33,7 @@
    --primitive-color-brand-azure: #62C5E8;
    --primitive-color-brand-nebula: #A99BEF;
    --primitive-color-brand-stellar-gold: #E7BD78;
-   --primitive-color-brand-aurora: #72D6A0;
-
-   /* ACCESSIBLE LIGHT-THEME BRAND ANCHORS */
+   --primitive-color-brand-aurora: #72D6A0;   /* ACCESSIBLE LIGHT-THEME BRAND ANCHORS */
 
    --primitive-color-brand-celestial-blue-700: #556F98;
    --primitive-color-brand-azure-700: #3B768B;
@@ -43,8 +41,37 @@
    --primitive-color-brand-stellar-gold-700: #836B44;
    --primitive-color-brand-aurora-700: #41795B;
 
-
    /* ==========================================
+     DOMAIN COLOR ANCHORS
+     ========================================== */
+
+   /* Dark-theme domain anchors */
+
+   --primitive-color-domain-stellar-amber: #FFD08A;
+   --primitive-color-domain-galactic-indigo: #A9B5FF;
+   --primitive-color-domain-cosmic-cyan: #78CFEA;
+   --primitive-color-domain-supernova-orange: #FF9A78;
+   --primitive-color-domain-celestial-turquoise: #83C8FF;
+   --primitive-color-domain-electric-indigo: #A4A0FF;
+   --primitive-color-domain-solar-coral: #FF9C9C;
+   --primitive-color-domain-cosmic-purple: #D0A1F2;
+   --primitive-color-domain-scientific-blue: #91B7E8;
+   --primitive-color-domain-atmospheric-teal: #77D5B8;
+   --primitive-color-domain-mission-silver: #C2D0E0;
+
+   /* Light-theme domain anchors */
+
+   --primitive-color-domain-stellar-amber-700: #94601B;
+   --primitive-color-domain-galactic-indigo-700: #5363B0;
+   --primitive-color-domain-cosmic-cyan-700: #26738D;
+   --primitive-color-domain-supernova-orange-700: #B64C2D;
+   --primitive-color-domain-celestial-turquoise-700: #286A9E;
+   --primitive-color-domain-electric-indigo-700: #5145A5;
+   --primitive-color-domain-solar-coral-700: #B34750;
+   --primitive-color-domain-cosmic-purple-700: #8050A8;
+   --primitive-color-domain-scientific-blue-700: #41658F;
+   --primitive-color-domain-atmospheric-teal-700: #267A68;
+   --primitive-color-domain-mission-silver-700: #52677F;   /* ==========================================
    STATUS COLOR ANCHORS
    ========================================== */
 
@@ -60,7 +87,4 @@
    --primitive-color-success-700: #16794B;
    --primitive-color-warning-700: #8A5A00;
    --primitive-color-error-700: #B42332;
-   --primitive-color-information-700: #245CA8;
-
-
-}
+   --primitive-color-information-700: #245CA8;}

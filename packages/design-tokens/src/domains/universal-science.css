@@ -1,0 +1,101 @@
+/*
+ * COSMOS DESIGN SYSTEM
+ * Universal Science — Domain Tokens
+ *
+ * Covers:
+ * Cosmology & Universe Evolution
+ * Astrophysics & Fundamental Physics
+ * Planetary Science & Astrobiology
+ */
+
+/* ==========================================
+   DEEP SPACE THEME
+   ========================================== */
+
+:root[data-theme="deep-space"] {
+
+  /* COSMOLOGY & UNIVERSE EVOLUTION */
+
+  --domain-cosmology-identity:
+    var(--primitive-color-domain-cosmic-purple);
+  --domain-cosmology-accent:
+    var(--primitive-color-brand-nebula);
+  --domain-cosmology-surface:
+    var(--primitive-color-neutral-900);
+  --domain-cosmology-border:
+    var(--primitive-color-domain-cosmic-purple);
+  --domain-cosmology-visualization:
+    var(--primitive-color-domain-cosmic-purple);
+
+  /* ASTROPHYSICS & FUNDAMENTAL PHYSICS */
+
+  --domain-astrophysics-identity:
+    var(--primitive-color-domain-scientific-blue);
+  --domain-astrophysics-accent:
+    var(--primitive-color-brand-celestial-blue);
+  --domain-astrophysics-surface:
+    var(--primitive-color-neutral-900);
+  --domain-astrophysics-border:
+    var(--primitive-color-domain-scientific-blue);
+  --domain-astrophysics-visualization:
+    var(--primitive-color-domain-scientific-blue);
+
+  /* PLANETARY SCIENCE & ASTROBIOLOGY */
+
+  --domain-astrobiology-identity:
+    var(--primitive-color-brand-aurora);
+  --domain-astrobiology-accent:
+    var(--primitive-color-domain-atmospheric-teal);
+  --domain-astrobiology-surface:
+    var(--primitive-color-neutral-900);
+  --domain-astrobiology-border:
+    var(--primitive-color-brand-aurora);
+  --domain-astrobiology-visualization:
+    var(--primitive-color-brand-aurora);
+}
+
+/* ==========================================
+   STELLAR LIGHT THEME
+   ========================================== */
+
+:root[data-theme="stellar-light"] {
+
+  /* COSMOLOGY & UNIVERSE EVOLUTION */
+
+  --domain-cosmology-identity:
+    var(--primitive-color-domain-cosmic-purple-700);
+  --domain-cosmology-accent:
+    var(--primitive-color-brand-nebula-700);
+  --domain-cosmology-surface:
+    var(--primitive-color-neutral-100);
+  --domain-cosmology-border:
+    var(--primitive-color-domain-cosmic-purple-700);
+  --domain-cosmology-visualization:
+    var(--primitive-color-domain-cosmic-purple-700);
+
+  /* ASTROPHYSICS & FUNDAMENTAL PHYSICS */
+
+  --domain-astrophysics-identity:
+    var(--primitive-color-domain-scientific-blue-700);
+  --domain-astrophysics-accent:
+    var(--primitive-color-brand-celestial-blue-700);
+  --domain-astrophysics-surface:
+    var(--primitive-color-neutral-100);
+  --domain-astrophysics-border:
+    var(--primitive-color-domain-scientific-blue-700);
+  --domain-astrophysics-visualization:
+    var(--primitive-color-domain-scientific-blue-700);
+
+  /* PLANETARY SCIENCE & ASTROBIOLOGY */
+
+  --domain-astrobiology-identity:
+    var(--primitive-color-brand-aurora-700);
+  --domain-astrobiology-accent:
+    var(--primitive-color-domain-atmospheric-teal-700);
+  --domain-astrobiology-surface:
+    var(--primitive-color-neutral-100);
+  --domain-astrobiology-border:
+    var(--primitive-color-brand-aurora-700);
+  --domain-astrobiology-visualization:
+    var(--primitive-color-brand-aurora-700);
+}

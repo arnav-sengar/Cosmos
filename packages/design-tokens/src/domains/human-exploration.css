@@ -1,0 +1,59 @@
+/*
+ * COSMOS DESIGN SYSTEM
+ * Human Exploration — Domain Tokens
+ *
+ * Covers:
+ * Space Missions
+ * Human Spaceflight
+ * Spacecraft
+ * Rockets
+ * Satellites
+ * Telescopes
+ * Observatories
+ * Scientific Instruments
+ * Astronomical Discoveries
+ */
+
+/* ==========================================
+   DEEP SPACE THEME
+   ========================================== */
+
+:root[data-theme="deep-space"] {
+
+  --domain-space-exploration-identity:
+    var(--primitive-color-domain-mission-silver);
+
+  --domain-space-exploration-accent:
+    var(--primitive-color-brand-celestial-blue);
+
+  --domain-space-exploration-surface:
+    var(--primitive-color-neutral-900);
+
+  --domain-space-exploration-border:
+    var(--primitive-color-domain-mission-silver);
+
+  --domain-space-exploration-visualization:
+    var(--primitive-color-domain-mission-silver);
+}
+
+/* ==========================================
+   STELLAR LIGHT THEME
+   ========================================== */
+
+:root[data-theme="stellar-light"] {
+
+  --domain-space-exploration-identity:
+    var(--primitive-color-domain-mission-silver-700);
+
+  --domain-space-exploration-accent:
+    var(--primitive-color-brand-celestial-blue-700);
+
+  --domain-space-exploration-surface:
+    var(--primitive-color-neutral-100);
+
+  --domain-space-exploration-border:
+    var(--primitive-color-domain-mission-silver-700);
+
+  --domain-space-exploration-visualization:
+    var(--primitive-color-domain-mission-silver-700);
+}

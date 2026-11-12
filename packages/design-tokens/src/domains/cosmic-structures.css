@@ -1,0 +1,57 @@
+/*
+ * COSMOS DESIGN SYSTEM
+ * Cosmic Structures — Domain Tokens
+ *
+ * Covers:
+ * Star Clusters
+ * Galaxy Groups
+ * Galaxy Clusters
+ * Superclusters
+ * Cosmic Filaments
+ * Cosmic Voids
+ * Large-Scale Cosmic Web
+ */
+
+/* ==========================================
+   DEEP SPACE THEME
+   ========================================== */
+
+:root[data-theme="deep-space"] {
+
+  --domain-cosmic-structures-identity:
+    var(--primitive-color-domain-cosmic-cyan);
+
+  --domain-cosmic-structures-accent:
+    var(--primitive-color-brand-azure);
+
+  --domain-cosmic-structures-surface:
+    var(--primitive-color-neutral-900);
+
+  --domain-cosmic-structures-border:
+    var(--primitive-color-domain-cosmic-cyan);
+
+  --domain-cosmic-structures-visualization:
+    var(--primitive-color-domain-cosmic-cyan);
+}
+
+/* ==========================================
+   STELLAR LIGHT THEME
+   ========================================== */
+
+:root[data-theme="stellar-light"] {
+
+  --domain-cosmic-structures-identity:
+    var(--primitive-color-domain-cosmic-cyan-700);
+
+  --domain-cosmic-structures-accent:
+    var(--primitive-color-brand-azure-700);
+
+  --domain-cosmic-structures-surface:
+    var(--primitive-color-neutral-100);
+
+  --domain-cosmic-structures-border:
+    var(--primitive-color-domain-cosmic-cyan-700);
+
+  --domain-cosmic-structures-visualization:
+    var(--primitive-color-domain-cosmic-cyan-700);
+}

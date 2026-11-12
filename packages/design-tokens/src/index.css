@@ -19,6 +19,14 @@
 @import "./themes/deep-space.css";
 @import "./themes/stellar-light.css";
 
+/* Domain Tokens */
+@import "./domains/celestial-entities.css";
+@import "./domains/cosmic-structures.css";
+@import "./domains/cosmic-phenomena.css";
+@import "./domains/universal-science.css";
+@import "./domains/cosmic-environments.css";
+@import "./domains/human-exploration.css";
+
 /* Semantic Tokens */
 @import "./semantic/colors.css";
 @import "./semantic/typography.css";

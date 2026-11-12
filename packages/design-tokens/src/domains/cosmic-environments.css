@@ -1,0 +1,57 @@
+/*
+ * COSMOS DESIGN SYSTEM
+ * Cosmic Environments — Domain Tokens
+ *
+ * Covers:
+ * Interstellar Medium
+ * Intergalactic Medium
+ * Planetary Atmospheres
+ * Magnetospheres
+ * Radiation Belts
+ * Plasma Environments
+ * Accretion Disks
+ */
+
+/* ==========================================
+   DEEP SPACE THEME
+   ========================================== */
+
+:root[data-theme="deep-space"] {
+
+  --domain-space-environments-identity:
+    var(--primitive-color-domain-atmospheric-teal);
+
+  --domain-space-environments-accent:
+    var(--primitive-color-brand-azure);
+
+  --domain-space-environments-surface:
+    var(--primitive-color-neutral-900);
+
+  --domain-space-environments-border:
+    var(--primitive-color-domain-atmospheric-teal);
+
+  --domain-space-environments-visualization:
+    var(--primitive-color-domain-atmospheric-teal);
+}
+
+/* ==========================================
+   STELLAR LIGHT THEME
+   ========================================== */
+
+:root[data-theme="stellar-light"] {
+
+  --domain-space-environments-identity:
+    var(--primitive-color-domain-atmospheric-teal-700);
+
+  --domain-space-environments-accent:
+    var(--primitive-color-brand-azure-700);
+
+  --domain-space-environments-surface:
+    var(--primitive-color-neutral-100);
+
+  --domain-space-environments-border:
+    var(--primitive-color-domain-atmospheric-teal-700);
+
+  --domain-space-environments-visualization:
+    var(--primitive-color-domain-atmospheric-teal-700);
+}

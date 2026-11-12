@@ -1,0 +1,182 @@
+/*
+ * COSMOS DESIGN SYSTEM
+ * Celestial Entities — Domain Tokens
+ *
+ * Covers:
+ * Solar System
+ * Stars & Stellar Systems
+ * Exoplanets & Planetary Systems
+ * Nebulae & Interstellar Objects
+ * Galaxies
+ * Black Holes & Compact Objects
+ */
+
+/* ==========================================
+   DEEP SPACE THEME
+   ========================================== */
+
+:root[data-theme="deep-space"] {
+
+  /* SOLAR SYSTEM */
+
+  --domain-solar-system-identity:
+    var(--primitive-color-brand-stellar-gold);
+  --domain-solar-system-accent:
+    var(--primitive-color-domain-stellar-amber);
+  --domain-solar-system-surface:
+    var(--primitive-color-neutral-900);
+  --domain-solar-system-border:
+    var(--primitive-color-brand-stellar-gold);
+  --domain-solar-system-visualization:
+    var(--primitive-color-domain-stellar-amber);
+
+  /* STARS & STELLAR SYSTEMS */
+
+  --domain-stars-identity:
+    var(--primitive-color-domain-stellar-amber);
+  --domain-stars-accent:
+    var(--primitive-color-brand-stellar-gold);
+  --domain-stars-surface:
+    var(--primitive-color-neutral-900);
+  --domain-stars-border:
+    var(--primitive-color-domain-stellar-amber);
+  --domain-stars-visualization:
+    var(--primitive-color-domain-stellar-amber);
+
+  /* EXOPLANETS & PLANETARY SYSTEMS */
+
+  --domain-exoplanets-identity:
+    var(--primitive-color-brand-azure);
+  --domain-exoplanets-accent:
+    var(--primitive-color-domain-celestial-turquoise);
+  --domain-exoplanets-surface:
+    var(--primitive-color-neutral-900);
+  --domain-exoplanets-border:
+    var(--primitive-color-brand-azure);
+  --domain-exoplanets-visualization:
+    var(--primitive-color-domain-celestial-turquoise);
+
+  /* NEBULAE & INTERSTELLAR OBJECTS */
+
+  --domain-nebulae-identity:
+    var(--primitive-color-brand-nebula);
+  --domain-nebulae-accent:
+    var(--primitive-color-domain-cosmic-purple);
+  --domain-nebulae-surface:
+    var(--primitive-color-neutral-900);
+  --domain-nebulae-border:
+    var(--primitive-color-brand-nebula);
+  --domain-nebulae-visualization:
+    var(--primitive-color-domain-cosmic-purple);
+
+  /* GALAXIES */
+
+  --domain-galaxies-identity:
+    var(--primitive-color-domain-galactic-indigo);
+  --domain-galaxies-accent:
+    var(--primitive-color-brand-nebula);
+  --domain-galaxies-surface:
+    var(--primitive-color-neutral-900);
+  --domain-galaxies-border:
+    var(--primitive-color-domain-galactic-indigo);
+  --domain-galaxies-visualization:
+    var(--primitive-color-domain-galactic-indigo);
+
+  /* BLACK HOLES & COMPACT OBJECTS */
+
+  --domain-black-holes-identity:
+    var(--primitive-color-brand-celestial-blue);
+  --domain-black-holes-accent:
+    var(--primitive-color-domain-electric-indigo);
+  --domain-black-holes-surface:
+    var(--primitive-color-neutral-900);
+  --domain-black-holes-border:
+    var(--primitive-color-brand-celestial-blue);
+  --domain-black-holes-visualization:
+    var(--primitive-color-domain-electric-indigo);
+}
+
+/* ==========================================
+   STELLAR LIGHT THEME
+   ========================================== */
+
+:root[data-theme="stellar-light"] {
+
+  /* SOLAR SYSTEM */
+
+  --domain-solar-system-identity:
+    var(--primitive-color-brand-stellar-gold-700);
+  --domain-solar-system-accent:
+    var(--primitive-color-domain-stellar-amber-700);
+  --domain-solar-system-surface:
+    var(--primitive-color-neutral-100);
+  --domain-solar-system-border:
+    var(--primitive-color-brand-stellar-gold-700);
+  --domain-solar-system-visualization:
+    var(--primitive-color-domain-stellar-amber-700);
+
+  /* STARS & STELLAR SYSTEMS */
+
+  --domain-stars-identity:
+    var(--primitive-color-domain-stellar-amber-700);
+  --domain-stars-accent:
+    var(--primitive-color-brand-stellar-gold-700);
+  --domain-stars-surface:
+    var(--primitive-color-neutral-100);
+  --domain-stars-border:
+    var(--primitive-color-domain-stellar-amber-700);
+  --domain-stars-visualization:
+    var(--primitive-color-domain-stellar-amber-700);
+
+  /* EXOPLANETS & PLANETARY SYSTEMS */
+
+  --domain-exoplanets-identity:
+    var(--primitive-color-brand-azure-700);
+  --domain-exoplanets-accent:
+    var(--primitive-color-domain-celestial-turquoise-700);
+  --domain-exoplanets-surface:
+    var(--primitive-color-neutral-100);
+  --domain-exoplanets-border:
+    var(--primitive-color-brand-azure-700);
+  --domain-exoplanets-visualization:
+    var(--primitive-color-domain-celestial-turquoise-700);
+
+  /* NEBULAE & INTERSTELLAR OBJECTS */
+
+  --domain-nebulae-identity:
+    var(--primitive-color-brand-nebula-700);
+  --domain-nebulae-accent:
+    var(--primitive-color-domain-cosmic-purple-700);
+  --domain-nebulae-surface:
+    var(--primitive-color-neutral-100);
+  --domain-nebulae-border:
+    var(--primitive-color-brand-nebula-700);
+  --domain-nebulae-visualization:
+    var(--primitive-color-domain-cosmic-purple-700);
+
+  /* GALAXIES */
+
+  --domain-galaxies-identity:
+    var(--primitive-color-domain-galactic-indigo-700);
+  --domain-galaxies-accent:
+    var(--primitive-color-brand-nebula-700);
+  --domain-galaxies-surface:
+    var(--primitive-color-neutral-100);
+  --domain-galaxies-border:
+    var(--primitive-color-domain-galactic-indigo-700);
+  --domain-galaxies-visualization:
+    var(--primitive-color-domain-galactic-indigo-700);
+
+  /* BLACK HOLES & COMPACT OBJECTS */
+
+  --domain-black-holes-identity:
+    var(--primitive-color-brand-celestial-blue-700);
+  --domain-black-holes-accent:
+    var(--primitive-color-domain-electric-indigo-700);
+  --domain-black-holes-surface:
+    var(--primitive-color-neutral-100);
+  --domain-black-holes-border:
+    var(--primitive-color-brand-celestial-blue-700);
+  --domain-black-holes-visualization:
+    var(--primitive-color-domain-electric-indigo-700);
+}
