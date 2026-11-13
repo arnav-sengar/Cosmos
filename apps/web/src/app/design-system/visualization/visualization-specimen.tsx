@@ -310,10 +310,19 @@ export default function VisualizationSpecimen() {
   const [mode, setMode] = useState<VisualizationMode>("standard");
 
   useEffect(() => {
-    document.documentElement.dataset.theme = theme;
+    const root = document.documentElement;
+    const previousTheme = root.dataset.theme;
+
+    root.dataset.theme = theme;
 
     return () => {
-      document.documentElement.dataset.theme = "deep-space";
+      if (root.dataset.theme !== theme) return;
+
+      if (previousTheme) {
+        root.dataset.theme = previousTheme;
+      } else {
+        delete root.dataset.theme;
+      }
     };
   }, [theme]);
 
