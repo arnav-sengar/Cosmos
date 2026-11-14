@@ -126,3 +126,36 @@ export type {
   DropdownMenuSeparatorProps,
   DropdownMenuPlacement,
 } from "./components/dropdown-menu/dropdown-menu.types";
+
+// Tabs
+
+export { Tabs } from "./components/tabs/tabs";
+
+export { TabsList } from "./components/tabs/tabs-list";
+
+export { TabsTrigger } from "./components/tabs/tabs-trigger";
+
+export { TabsContent } from "./components/tabs/tabs-content";
+
+export type {
+  TabsProps,
+  TabsListProps,
+  TabsTriggerProps,
+  TabsContentProps,
+  TabsOrientation,
+  TabsActivationMode,
+} from "./components/tabs/tabs.types";
+
+// Accordion
+export { Accordion } from "./components/accordion/accordion";
+export { AccordionItem } from "./components/accordion/accordion-item";
+export { AccordionTrigger } from "./components/accordion/accordion-trigger";
+export { AccordionContent } from "./components/accordion/accordion-content";
+export type {
+  AccordionProps,
+  AccordionSingleProps,
+  AccordionMultipleProps,
+  AccordionItemProps,
+  AccordionTriggerProps,
+  AccordionContentProps,
+} from "./components/accordion/accordion.types";
