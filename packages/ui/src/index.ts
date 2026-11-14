@@ -1,4 +1,4 @@
-// Cosmos UI — Public API
+// Cosmos UI - Public API
 
 export { Button } from "./components/button/button";
 
@@ -177,3 +177,11 @@ export type {
   SkeletonProps,
   SkeletonVariant,
 } from "./components/skeleton/skeleton.types";
+
+// Overlay Provider
+
+export { OverlayProvider } from "./components/overlay-provider/overlay-provider";
+
+export type {
+  OverlayProviderProps,
+} from "./components/overlay-provider/overlay-provider.types";

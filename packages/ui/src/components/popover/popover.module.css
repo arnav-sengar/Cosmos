@@ -1,4 +1,4 @@
-﻿.popover {
+.popover {
   box-sizing: border-box;
 
   width: max-content;
@@ -19,6 +19,7 @@
   overscroll-behavior: contain;
 
   outline: none;
+  pointer-events: auto;
 }
 
 @media (prefers-reduced-motion: reduce) {

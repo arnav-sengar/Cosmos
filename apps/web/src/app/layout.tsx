@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
 
+import { OverlayProvider } from "@cosmos/ui";
 import { appConfig } from "../config/app";
 import { appMetadata } from "../config/metadata";
 
@@ -55,7 +56,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         h-full antialiased
       `}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <OverlayProvider>{children}</OverlayProvider>
+      </body>
     </html>
   );
 }
