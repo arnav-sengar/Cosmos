@@ -1,6 +1,6 @@
-﻿/*
+/*
  * COSMOS DESIGN SYSTEM
- * Component Tokens — Overlays
+ * Component Tokens � Overlays
  *
  * Component-specific design decisions for dialogs and floating layers.
  * All references resolve through semantic tokens.
@@ -91,4 +91,47 @@
 
   --overlay-transition-duration: var(--motion-duration-normal);
   --overlay-transition-easing: var(--motion-easing-standard);
+/* ==========================================
+     DROPDOWN MENU
+     ========================================== */
+
+  /* SURFACE */
+
+  --dropdown-menu-background: var(--color-surface-elevated);
+  --dropdown-menu-foreground: var(--color-text-primary);
+  --dropdown-menu-border: var(--color-border-subtle);
+  --dropdown-menu-elevation: var(--elevation-floating);
+
+  /* GEOMETRY */
+
+  --dropdown-menu-padding: var(--spacing-inline-tight);
+  --dropdown-menu-radius: var(--shape-radius-control);
+  --dropdown-menu-border-width: var(--shape-border-default);
+
+  /* ITEMS */
+
+  --dropdown-menu-item-height: var(--sizing-control-large);
+  --dropdown-menu-item-target-size: var(--sizing-interactive-target-min);
+  --dropdown-menu-item-padding-inline: var(--spacing-component-normal);
+  --dropdown-menu-item-gap: var(--spacing-inline-normal);
+  --dropdown-menu-item-radius: var(--shape-radius-control);
+
+  /* ITEM STATES */
+
+  --dropdown-menu-item-background-hover: var(--color-surface-secondary);
+  --dropdown-menu-item-background-focus: var(--color-surface-secondary);
+  --dropdown-menu-item-foreground-disabled: var(--color-interactive-disabled);
+  --dropdown-menu-item-foreground-destructive: var(--color-status-error);
+
+  /* TYPOGRAPHY */
+
+  --dropdown-menu-item-font-family: var(--typography-body-small-font-family);
+  --dropdown-menu-item-font-size: var(--typography-body-small-font-size);
+  --dropdown-menu-item-font-weight: var(--typography-body-small-font-weight);
+
+  /* SEPARATOR */
+
+  --dropdown-menu-separator-color: var(--color-border-subtle);
+  --dropdown-menu-separator-spacing: var(--spacing-inline-tight);
+
 }

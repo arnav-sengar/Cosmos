@@ -1,0 +1,216 @@
+﻿/* Radio group */
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-component-normal);
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.legend {
+  padding: 0;
+  font-family: var(--field-label-font-family);
+  font-size: var(--field-label-font-size);
+  font-weight: var(--field-label-font-weight);
+  line-height: var(--typography-body-line-height);
+  color: var(--field-foreground);
+}
+
+/* Options layout */
+
+.options {
+  display: flex;
+  gap: var(--spacing-component-normal);
+  min-width: 0;
+}
+
+.vertical {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.horizontal {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* Individual option */
+
+.option {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-inline-normal);
+  min-height: var(--choice-control-target-size);
+  cursor: pointer;
+}
+
+.radio {
+  flex: 0 0 auto;
+  appearance: none;
+  display: inline-grid;
+  place-content: center;
+
+  width: var(--choice-control-size-md);
+  height: var(--choice-control-size-md);
+
+  margin: 0;
+  border: var(--field-border-width) solid var(--choice-control-border);
+  border-radius: var(--shape-radius-circular);
+
+  background-color: var(--choice-control-background);
+  cursor: pointer;
+
+  transition:
+    background-color var(--primitive-duration-fast)
+      var(--primitive-easing-standard),
+    border-color var(--primitive-duration-fast)
+      var(--primitive-easing-standard);
+}
+
+.radio::before {
+  content: "";
+  width: 0.45em;
+  height: 0.45em;
+  border-radius: var(--shape-radius-circular);
+  background-color: var(--choice-control-selected-foreground);
+  transform: scale(0);
+  transition: transform var(--primitive-duration-fast)
+    var(--primitive-easing-standard);
+}
+
+.radio:checked {
+  background-color: var(--choice-control-selected-background);
+  border-color: var(--choice-control-selected-background);
+}
+
+.radio:checked::before {
+  transform: scale(1);
+}
+
+/* Sizes */
+
+.small {
+  width: var(--choice-control-size-sm);
+  height: var(--choice-control-size-sm);
+}
+
+.medium {
+  width: var(--choice-control-size-md);
+  height: var(--choice-control-size-md);
+}
+
+.large {
+  width: var(--choice-control-size-lg);
+  height: var(--choice-control-size-lg);
+}
+
+/* Label */
+
+.label {
+  font-family: var(--field-font-family);
+  font-size: var(--field-font-size);
+  line-height: var(--field-line-height);
+  color: var(--field-foreground);
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Hover and focus */
+
+.radio:hover:not(:disabled) {
+  border-color: var(--field-border-hover);
+}
+
+.radio:focus-visible {
+  outline: var(--field-focus-ring-width)
+    var(--focus-indicator-style)
+    var(--color-interactive-primary);
+  outline-offset: var(--field-focus-ring-offset);
+}
+
+/* Validation */
+
+.radio[aria-invalid="true"] {
+  border-color: var(--field-border-error);
+}
+
+/* Disabled */
+
+.radio:disabled {
+  background-color: var(--field-background-disabled);
+  border-color: var(--choice-control-border-disabled);
+  cursor: not-allowed;
+}
+
+.radio:disabled:checked {
+  background-color: var(--field-background-disabled);
+}
+
+.radio:disabled:checked::before {
+  background-color: var(--field-disabled-foreground);
+}
+
+.radio:disabled + .label {
+  color: var(--field-disabled-foreground);
+  cursor: not-allowed;
+}
+
+.option:has(.radio:disabled) {
+  cursor: not-allowed;
+}
+
+/* Supporting text */
+
+.helperText,
+.errorMessage {
+  font-family: var(--typography-caption-font-family);
+  font-size: var(--field-helper-font-size);
+  line-height: var(--typography-caption-line-height);
+}
+
+.helperText {
+  color: var(--color-text-secondary);
+}
+
+.errorMessage {
+  color: var(--field-error-foreground);
+}
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+  .radio,
+  .radio::before {
+    transition-duration: var(--primitive-duration-reduced);
+  }
+}
+
+/* Windows High Contrast */
+
+@media (forced-colors: active) {
+  .radio {
+    appearance: auto;
+    forced-color-adjust: auto;
+    accent-color: Highlight;
+  }
+
+  .radio::before {
+    content: none;
+  }
+
+  .radio:focus-visible {
+    outline-color: Highlight;
+  }
+
+  .radio[aria-invalid="true"] {
+    border-color: Mark;
+  }
+
+  .radio:disabled {
+    border-color: GrayText;
+  }
+}

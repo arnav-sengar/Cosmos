@@ -1,0 +1,103 @@
+.content {
+  pointer-events: auto;
+  min-width: max-content;
+  max-width: min(20rem, calc(100vw - 1rem));
+  max-height: min(24rem, calc(100vh - 1rem));
+  overflow-y: auto;
+  overscroll-behavior: contain;
+
+  padding: var(--dropdown-menu-padding);
+
+  color: var(--dropdown-menu-foreground);
+  background: var(--dropdown-menu-background);
+
+  border: var(--dropdown-menu-border-width) solid
+    var(--dropdown-menu-border);
+  border-radius: var(--dropdown-menu-radius);
+
+  box-shadow: var(--dropdown-menu-elevation);
+
+  outline: none;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: var(--dropdown-menu-item-gap);
+
+  width: 100%;
+  min-height: max(
+    var(--dropdown-menu-item-height),
+    var(--dropdown-menu-item-target-size)
+  );
+
+  padding-block: var(--spacing-inline-tight);
+  padding-inline: var(--dropdown-menu-item-padding-inline);
+
+  color: var(--dropdown-menu-foreground);
+  background: transparent;
+
+  border: 0;
+  border-radius: var(--dropdown-menu-item-radius);
+
+  font-family: var(--dropdown-menu-item-font-family);
+  font-size: var(--dropdown-menu-item-font-size);
+  font-weight: var(--dropdown-menu-item-font-weight);
+
+  text-align: start;
+  text-decoration: none;
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  transition:
+    background-color var(--motion-duration-fast)
+    var(--motion-easing-standard),
+    color var(--motion-duration-fast)
+    var(--motion-easing-standard);
+}
+
+.item[data-active="true"],
+.item:hover:not(:disabled):not([aria-disabled="true"]) {
+  background: var(--dropdown-menu-item-background-hover);
+}
+
+.item:focus-visible {
+  outline: var(--focus-indicator-width)
+    var(--focus-indicator-style)
+    var(--color-interactive-focus);
+  outline-offset: calc(-1 * var(--focus-indicator-offset));
+}
+
+.item:disabled,
+.item[aria-disabled="true"] {
+  color: var(--dropdown-menu-item-foreground-disabled);
+  cursor: not-allowed;
+}
+
+.item[data-destructive="true"] {
+  color: var(--dropdown-menu-item-foreground-destructive);
+}
+
+.item[data-destructive="true"]:disabled,
+.item[data-destructive="true"][aria-disabled="true"] {
+  color: var(--dropdown-menu-item-foreground-disabled);
+}
+
+.linkItem {
+  display: flex;
+}
+
+.separator {
+  height: 1px;
+  margin-block: var(--dropdown-menu-separator-spacing);
+
+  background: var(--dropdown-menu-separator-color);
+  border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .item {
+    transition: none;
+  }
+}

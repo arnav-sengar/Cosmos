@@ -1,0 +1,205 @@
+﻿/* Field */
+
+.field {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  max-width: 100%;
+}
+
+/* Control group */
+
+.controlGroup {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-inline-normal);
+  min-height: var(--choice-control-target-size);
+  cursor: pointer;
+}
+
+/* Switch */
+
+.switch {
+  position: relative;
+  flex: 0 0 auto;
+  appearance: none;
+
+  width: var(--switch-track-width);
+  height: var(--switch-track-height);
+
+  margin: 0;
+  border: 0;
+  border-radius: var(--switch-track-radius);
+
+  background-color: var(--switch-track-background);
+
+  cursor: pointer;
+
+  transition:
+    background-color var(--primitive-duration-fast)
+      var(--primitive-easing-standard);
+}
+
+.switch::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+
+  width: var(--switch-thumb-size);
+  height: var(--switch-thumb-size);
+
+  border-radius: var(--switch-thumb-radius);
+  background-color: var(--switch-thumb-background);
+
+  transform: translateY(-50%);
+
+  box-shadow: var(--elevation-raised);
+
+  transition:
+    transform var(--primitive-duration-fast)
+      var(--primitive-easing-standard);
+}
+
+/* Checked */
+
+.switch:checked {
+  background-color: var(--switch-track-background-checked);
+}
+
+.switch:checked::before {
+  transform: translate(
+    calc(var(--switch-track-width) - var(--switch-thumb-size)),
+    -50%
+  );
+}
+
+/* Sizes */
+
+.field[data-size="small"] {
+  --switch-track-width: var(--sizing-control-standard);
+  --switch-track-height: var(--sizing-control-compact);
+  --switch-thumb-size: var(--sizing-icon-small);
+}
+
+.field[data-size="medium"] {
+  --switch-track-width: var(--sizing-control-large);
+  --switch-track-height: var(--sizing-control-small);
+  --switch-thumb-size: var(--sizing-icon-medium);
+}
+
+.field[data-size="large"] {
+  --switch-track-width: var(--sizing-control-extra-large);
+  --switch-track-height: var(--sizing-control-standard);
+  --switch-thumb-size: var(--sizing-icon-large);
+}
+
+/* Label */
+
+.label {
+  font-family: var(--field-font-family);
+  font-size: var(--field-font-size);
+  line-height: var(--field-line-height);
+  color: var(--field-foreground);
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Hover */
+
+.switch:hover:not(:disabled) {
+  outline: 1px solid var(--field-border-hover);
+  outline-offset: 1px;
+}
+
+/* Keyboard focus */
+
+.switch:focus-visible {
+  outline: var(--field-focus-ring-width)
+    var(--focus-indicator-style)
+    var(--color-interactive-primary);
+
+  outline-offset: var(--field-focus-ring-offset);
+}
+
+/* Validation */
+
+.switch[aria-invalid="true"] {
+  outline: var(--field-focus-ring-width)
+    solid var(--field-border-error);
+  outline-offset: var(--field-focus-ring-offset);
+}
+
+/* Disabled */
+
+.switch:disabled {
+  background-color: var(--switch-track-background-disabled);
+  cursor: not-allowed;
+}
+
+.switch:disabled::before {
+  background-color: var(--field-disabled-foreground);
+}
+
+.switch:disabled + .label {
+  color: var(--field-disabled-foreground);
+  cursor: not-allowed;
+}
+
+.controlGroup:has(.switch:disabled) {
+  cursor: not-allowed;
+}
+
+/* Supporting text */
+
+.helperText,
+.errorMessage {
+  margin-top: var(--field-helper-gap);
+  margin-left: calc(
+    var(--switch-track-width) +
+    var(--spacing-inline-normal)
+  );
+
+  font-family: var(--typography-caption-font-family);
+  font-size: var(--field-helper-font-size);
+  line-height: var(--typography-caption-line-height);
+}
+
+.helperText {
+  color: var(--color-text-secondary);
+}
+
+.errorMessage {
+  color: var(--field-error-foreground);
+}
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+  .switch,
+  .switch::before {
+    transition-duration: var(--primitive-duration-reduced);
+  }
+}
+
+/* Windows High Contrast */
+
+@media (forced-colors: active) {
+  .switch {
+    appearance: auto;
+    forced-color-adjust: auto;
+    accent-color: Highlight;
+  }
+
+  .switch::before {
+    content: none;
+  }
+
+  .switch:focus-visible {
+    outline-color: Highlight;
+  }
+
+  .switch:disabled {
+    background-color: GrayText;
+  }
+}

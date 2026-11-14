@@ -1,0 +1,34 @@
+﻿.popover {
+  box-sizing: border-box;
+
+  width: max-content;
+  max-width: calc(100vw - 2rem);
+  max-height: calc(100vh - 2rem);
+
+  padding: var(--popover-padding);
+
+  border: var(--popover-border-width) solid var(--popover-border);
+  border-radius: var(--popover-radius);
+
+  background-color: var(--popover-background);
+  color: var(--popover-foreground);
+
+  box-shadow: var(--popover-elevation);
+
+  overflow: auto;
+  overscroll-behavior: contain;
+
+  outline: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .popover {
+    scroll-behavior: auto;
+  }
+}
+
+@media (forced-colors: active) {
+  .popover {
+    border-color: CanvasText;
+  }
+}

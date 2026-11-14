@@ -1,0 +1,102 @@
+﻿.trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-inline-normal);
+
+  min-height: var(--sizing-control-large);
+  max-width: 100%;
+  padding: var(--spacing-inline-tight) var(--spacing-inline-normal);
+
+  color: var(--color-text-primary);
+  background: transparent;
+  border: var(--shape-border-none);
+  border-radius: var(--shape-radius-control);
+
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+
+  transition:
+    background-color var(--motion-duration-fast),
+    color var(--motion-duration-fast);
+}
+
+.trigger:hover {
+  background: var(--navigation-item-background-hover);
+}
+
+.trigger:focus-visible {
+  outline: var(--button-focus-ring-width)
+    var(--focus-indicator-style)
+    var(--color-interactive-primary);
+
+  outline-offset: var(--button-focus-ring-offset);
+}
+
+.avatar {
+  position: relative;
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+
+  width: var(--avatar-size-md);
+  height: var(--avatar-size-md);
+
+  overflow: hidden;
+  border-radius: var(--avatar-radius);
+  background: var(--color-surface-secondary);
+  color: var(--color-text-secondary);
+}
+
+.avatarImage {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatarFallback {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+
+  font-family: var(--typography-body-small-font-family);
+  font-size: var(--typography-body-small-font-size);
+  font-weight: var(--typography-body-small-font-weight);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.displayName {
+  min-width: 0;
+  max-width: 12rem;
+
+  overflow: hidden;
+  color: inherit;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.chevron {
+  display: inline-block;
+  flex: 0 0 auto;
+
+  width: 0.4rem;
+  height: 0.4rem;
+  margin-block-start: -0.2rem;
+
+  border-inline-end: var(--shape-border-default) solid currentColor;
+  border-block-end: var(--shape-border-default) solid currentColor;
+
+  transform: rotate(45deg);
+  transition: transform var(--motion-duration-fast);
+}
+
+.trigger[aria-expanded="true"] .chevron {
+  transform: rotate(225deg);
+}

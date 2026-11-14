@@ -1,7 +1,10 @@
-
-import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+
+import { appConfig } from "../config/app";
+import { appMetadata } from "../config/metadata";
+
+export const metadata = appMetadata;
 
 // Display typography: Space Grotesk
 const spaceGrotesk = localFont({
@@ -40,16 +43,11 @@ const ibmPlexMono = localFont({
   preload: false,
 });
 
-export const metadata: Metadata = {
-  title: "Cosmos",
-  description: "Explore the universe through interactive astronomy, science, and discovery.",
-};
-
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
-      lang="en"
-      data-theme="deep-space"
+      lang={appConfig.locale}
+      data-theme={appConfig.theme}
       className={`
         ${spaceGrotesk.variable}
         ${inter.variable}

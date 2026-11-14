@@ -1,0 +1,209 @@
+﻿/* Native dialog viewport */
+
+.dialog {
+  position: fixed;
+  inset: 0;
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  max-height: none;
+
+  margin: 0;
+  padding: var(--spacing-content-normal);
+
+  border: 0;
+  background: transparent;
+  color: var(--dialog-foreground);
+
+  overflow: visible;
+}
+
+.dialog[open] {
+  display: flex;
+}
+
+.dialog::backdrop {
+  background-color: color-mix(
+    in srgb,
+    var(--overlay-backdrop-background) 72%,
+    transparent
+  );
+}
+
+/* Dialog surface */
+
+.surface {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+  width: 100%;
+  max-width: var(--dialog-width-md);
+  max-height: 100%;
+
+  padding: var(--dialog-padding);
+
+  border: var(--dialog-border-width) solid var(--dialog-border);
+  border-radius: var(--dialog-radius);
+
+  background-color: var(--dialog-background);
+  color: var(--dialog-foreground);
+
+  box-shadow: var(--dialog-elevation);
+
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+
+.dialog[data-size="small"] .surface {
+  max-width: var(--dialog-width-sm);
+}
+
+.dialog[data-size="medium"] .surface {
+  max-width: var(--dialog-width-md);
+}
+
+.dialog[data-size="large"] .surface {
+  max-width: var(--dialog-width-lg);
+}
+
+/* Header */
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--spacing-component-comfortable);
+}
+
+.heading {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--spacing-inline-tight);
+  min-width: 0;
+}
+
+.title {
+  margin: 0;
+
+  font-family: var(--typography-h3-font-family);
+  font-size: var(--typography-h3-font-size);
+  font-weight: var(--typography-h3-font-weight);
+  line-height: var(--typography-h3-line-height);
+  letter-spacing: var(--typography-h3-letter-spacing);
+
+  color: var(--dialog-foreground);
+}
+
+.description {
+  margin: 0;
+
+  font-family: var(--typography-body-small-font-family);
+  font-size: var(--typography-body-small-font-size);
+  font-weight: var(--typography-body-small-font-weight);
+  line-height: var(--typography-body-small-line-height);
+
+  color: var(--color-text-secondary);
+}
+
+/* Close control */
+
+.closeButton {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+
+  width: var(--sizing-interactive-target-min);
+  height: var(--sizing-interactive-target-min);
+
+  padding: 0;
+
+  border: 0;
+  border-radius: var(--shape-radius-control);
+
+  background: transparent;
+  color: var(--color-text-secondary);
+
+  font: inherit;
+  font-size: var(--typography-h4-font-size);
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+.closeButton:hover {
+  background-color: var(--color-background-secondary);
+  color: var(--color-text-primary);
+}
+
+.closeButton:focus-visible {
+  outline: var(--focus-indicator-width)
+    var(--focus-indicator-style)
+    var(--color-interactive-primary);
+
+  outline-offset: var(--focus-indicator-offset);
+}
+
+/* Content */
+
+.content {
+  min-width: 0;
+  margin-top: var(--spacing-content-normal);
+}
+
+/* Floating overlay portal */
+
+.portalRoot {
+  position: fixed;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  pointer-events: none;
+}
+
+/* Responsive layout */
+
+@media (max-width: 40rem) {
+  .dialog {
+    padding: var(--spacing-inline-normal);
+  }
+
+  .surface {
+    max-height: 100%;
+  }
+}
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+  .dialog,
+  .surface,
+  .closeButton {
+    scroll-behavior: auto;
+    transition-duration: var(--primitive-duration-reduced);
+  }
+}
+
+/* Windows High Contrast */
+
+@media (forced-colors: active) {
+  .surface {
+    border-color: CanvasText;
+  }
+
+  .closeButton:focus-visible {
+    outline-color: Highlight;
+  }
+}

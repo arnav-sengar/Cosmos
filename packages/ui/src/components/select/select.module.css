@@ -1,0 +1,182 @@
+﻿/* Field */
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--field-label-gap);
+  width: fit-content;
+  max-width: 100%;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+/* Label */
+
+.label {
+  font-family: var(--field-label-font-family);
+  font-size: var(--field-label-font-size);
+  font-weight: var(--field-label-font-weight);
+  line-height: var(--typography-body-line-height);
+  color: var(--field-foreground);
+}
+
+/* Control */
+
+.control {
+  position: relative;
+  width: 100%;
+}
+
+.select {
+  display: block;
+  width: 100%;
+  min-width: 0;
+
+  appearance: none;
+
+  padding:
+    var(--field-padding-block)
+    calc(var(--field-padding-inline) + var(--sizing-icon-medium) + var(--spacing-inline-tight))
+    var(--field-padding-block)
+    var(--field-padding-inline);
+
+  border: var(--field-border-width) solid var(--field-border);
+  border-radius: var(--field-radius);
+
+  background-color: var(--field-background);
+  color: var(--field-foreground);
+
+  font-family: var(--field-font-family);
+  font-size: var(--field-font-size);
+  line-height: var(--field-line-height);
+
+  cursor: pointer;
+
+  transition:
+    border-color var(--primitive-duration-fast)
+      var(--primitive-easing-standard),
+    background-color var(--primitive-duration-fast)
+      var(--primitive-easing-standard);
+}
+
+/* Sizes */
+
+.small {
+  min-height: var(--field-height-sm);
+}
+
+.medium {
+  min-height: var(--field-height-md);
+}
+
+.large {
+  min-height: var(--field-height-lg);
+}
+
+/* Chevron */
+
+.indicator {
+  position: absolute;
+  top: 50%;
+  right: var(--field-padding-inline);
+
+  width: 0.5rem;
+  height: 0.5rem;
+
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+
+  color: var(--field-foreground);
+
+  transform: translateY(-70%) rotate(45deg);
+
+  pointer-events: none;
+}
+
+/* Hover */
+
+.select:hover:not(:disabled):not([aria-invalid="true"]) {
+  border-color: var(--field-border-hover);
+}
+
+/* Keyboard focus */
+
+.select:focus-visible {
+  outline: var(--field-focus-ring-width)
+    var(--focus-indicator-style)
+    var(--color-interactive-primary);
+
+  outline-offset: var(--field-focus-ring-offset);
+}
+
+/* Validation */
+
+.select[aria-invalid="true"] {
+  border-color: var(--field-border-error);
+}
+
+/* Disabled */
+
+.select:disabled {
+  background-color: var(--field-background-disabled);
+  border-color: var(--field-border-disabled);
+  color: var(--field-disabled-foreground);
+  cursor: not-allowed;
+}
+
+.select:disabled + .indicator {
+  color: var(--field-disabled-foreground);
+}
+
+/* Supporting text */
+
+.helperText,
+.errorMessage {
+
+  font-family: var(--typography-caption-font-family);
+  font-size: var(--field-helper-font-size);
+  line-height: var(--typography-caption-line-height);
+}
+
+.helperText {
+  color: var(--color-text-secondary);
+}
+
+.errorMessage {
+  color: var(--field-error-foreground);
+}
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+  .select {
+    transition-duration: var(--primitive-duration-reduced);
+  }
+}
+
+/* Windows High Contrast */
+
+@media (forced-colors: active) {
+  .select {
+    appearance: auto;
+    forced-color-adjust: auto;
+  }
+
+  .indicator {
+    display: none;
+  }
+
+  .select:focus-visible {
+    outline-color: Highlight;
+  }
+
+  .select[aria-invalid="true"] {
+    border-color: Mark;
+  }
+
+  .select:disabled {
+    border-color: GrayText;
+  }
+}
