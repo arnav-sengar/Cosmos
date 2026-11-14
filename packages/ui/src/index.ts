@@ -1,4 +1,4 @@
-﻿// Cosmos UI — Public API
+// Cosmos UI — Public API
 
 export { Button } from "./components/button/button";
 
@@ -159,3 +159,21 @@ export type {
   AccordionTriggerProps,
   AccordionContentProps,
 } from "./components/accordion/accordion.types";
+
+// Separator
+
+export { Separator } from "./components/separator/separator";
+
+export type {
+  SeparatorProps,
+  SeparatorOrientation,
+} from "./components/separator/separator.types";
+
+// Skeleton
+
+export { Skeleton } from "./components/skeleton/skeleton";
+
+export type {
+  SkeletonProps,
+  SkeletonVariant,
+} from "./components/skeleton/skeleton.types";

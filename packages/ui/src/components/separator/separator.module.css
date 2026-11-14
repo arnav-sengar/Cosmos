@@ -1,0 +1,14 @@
+.root {
+  flex-shrink: 0;
+  background-color: var(--color-border-subtle);
+}
+
+.horizontal {
+  width: 100%;
+  height: var(--shape-border-default);
+}
+
+.vertical {
+  width: var(--shape-border-default);
+  align-self: stretch;
+}
