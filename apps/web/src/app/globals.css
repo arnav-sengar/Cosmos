@@ -1,6 +1,11 @@
 @import "tailwindcss";
 @import "@cosmos/design-tokens/css";
 
+:root {
+  --cosmos-page-gutter: clamp(24px, 4.5vw, 80px);
+  --cosmos-content-max: 1600px;
+}
+
 @theme inline {
   --font-sans: var(--font-inter);
   --font-mono: var(--font-ibm-plex-mono);

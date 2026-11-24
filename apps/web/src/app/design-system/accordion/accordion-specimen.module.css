@@ -12,7 +12,7 @@
 .eyebrow {
   margin: 0 0 1rem;
   color: var(--color-text-accent);
-  font-family: var(--font-ibm-plex-mono);
+  font-family: var(--typography-technical-small-font-family);
   font-size: 0.75rem;
   letter-spacing: 0.12em;
 }
@@ -20,7 +20,7 @@
 .title {
   margin: 0;
   color: var(--color-text-primary);
-  font-family: var(--font-space-grotesk);
+  font-family: var(--typography-display-font-family);
   font-size: clamp(2.5rem, 6vw, 4rem);
   font-weight: 600;
   letter-spacing: -0.045em;
@@ -46,7 +46,7 @@
 .sectionHeading h2 {
   margin: 0;
   color: var(--color-text-primary);
-  font-family: var(--font-space-grotesk);
+  font-family: var(--typography-display-font-family);
   font-size: 1.25rem;
   font-weight: 600;
 }
@@ -96,7 +96,7 @@
   border-radius: 0.25rem;
   background: var(--color-background-elevated);
   color: var(--color-text-accent);
-  font-family: var(--font-ibm-plex-mono);
+  font-family: var(--typography-technical-small-font-family);
   font-size: 0.75rem;
 }
 

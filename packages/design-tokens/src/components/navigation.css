@@ -1,4 +1,4 @@
-﻿/*
+/*
  * COSMOS DESIGN SYSTEM
  * Component Tokens — Navigation
  *
@@ -55,6 +55,23 @@
   --navigation-item-font-family: var(--typography-body-font-family);
   --navigation-item-font-size: var(--typography-body-small-font-size);
   --navigation-item-font-weight: var(--typography-body-small-font-weight);
+
+  /* ==========================================
+     PUBLIC NAVIGATION
+     ========================================== */
+
+  --public-navigation-brand-font-family:
+    var(--typography-display-font-family);
+  --public-navigation-brand-font-size: 1.25rem;
+  --public-navigation-brand-font-weight: 600;
+  --public-navigation-brand-letter-spacing: -0.025em;
+
+  --public-navigation-link-font-family:
+    var(--navigation-item-font-family);
+  --public-navigation-link-font-size:
+    var(--typography-body-small-font-size);
+  --public-navigation-link-font-weight:
+    var(--navigation-item-font-weight);
 
   /* ==========================================
      TABS

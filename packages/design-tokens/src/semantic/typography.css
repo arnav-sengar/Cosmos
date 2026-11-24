@@ -71,7 +71,7 @@
 
   --typography-body-small-font-family:
     var(--primitive-font-family-inter);
-  --typography-body-small-font-size: 0.875rem;
+  --typography-body-small-font-size: 0.9375rem;
   --typography-body-small-font-weight: 400;
   --typography-body-small-line-height: 1.5;
   --typography-body-small-letter-spacing: 0;
@@ -82,11 +82,21 @@
 
   --typography-caption-font-family:
     var(--primitive-font-family-inter);
-  --typography-caption-font-size: 0.75rem;
+  --typography-caption-font-size: 0.8125rem;
   --typography-caption-font-weight: 400;
   --typography-caption-line-height: 1.4;
   --typography-caption-letter-spacing: 0.01em;
 
+  /* ==========================================
+     COMPACT TECHNICAL / METADATA
+     ========================================== */
+
+  --typography-technical-small-font-family:
+    var(--primitive-font-family-ibm-plex-mono);
+  --typography-technical-small-font-size: 0.75rem;
+  --typography-technical-small-font-weight: 400;
+  --typography-technical-small-line-height: 1.5;
+  --typography-technical-small-letter-spacing: 0.08em;
   /* ==========================================
      TECHNICAL / SCIENTIFIC
      ========================================== */

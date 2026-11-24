@@ -23,9 +23,9 @@
   border: 0;
   background: transparent;
   color: var(--color-text-primary);
-  font-family: var(--navigation-item-font-family);
-  font-size: var(--navigation-item-font-size);
-  font-weight: var(--navigation-item-font-weight);
+  font-family: var(--typography-body-font-family);
+  font-size: var(--typography-body-font-size);
+  font-weight: var(--typography-body-font-weight);
   text-align: start;
   cursor: pointer;
 }
