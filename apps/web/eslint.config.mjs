@@ -14,6 +14,8 @@ const eslintConfig = defineConfig([
     files: [
       "apps/web/src/**/*.{js,jsx,ts,tsx,mjs,cjs,mts,cts}",
       "packages/*/src/**/*.{js,jsx,ts,tsx,mjs,cjs,mts,cts}",
+      "tools/ta09-benchmark/src/**/*.{js,jsx,ts,tsx,mjs,cjs,mts,cts}",
+      "tools/ta09-benchmark/tests/**/*.{js,jsx,ts,tsx,mjs,cjs,mts,cts}",
     ],
     plugins: {
       boundaries,
@@ -23,6 +25,8 @@ const eslintConfig = defineConfig([
       "boundaries/include": [
         "apps/web/src/**/*",
         "packages/*/src/**/*",
+        "tools/ta09-benchmark/src/**/*",
+        "tools/ta09-benchmark/tests/**/*",
       ],
       "boundaries/elements": [
         {
@@ -89,6 +93,11 @@ const eslintConfig = defineConfig([
         {
           type: "config-package",
           pattern: "packages/config",
+          partialMatch: false,
+        },
+        {
+          type: "benchmark-tool",
+          pattern: "tools/ta09-benchmark",
           partialMatch: false,
         },
       ],
@@ -324,7 +333,53 @@ const eslintConfig = defineConfig([
                 },
               },
             },
+            {
+              // The persistence benchmark remains independent of Cosmos runtime packages.
+              from: { element: { type: "benchmark-tool" } },
+              disallow: {
+                to: {
+                  element: {
+                    types: [
+                      "app",
+                      "feature",
+                      "shared-component",
+                      "infrastructure",
+                      "integration",
+                      "shared-hook",
+                      "shared-store",
+                      "shared-types",
+                      "app-config",
+                      "design-tokens",
+                      "ui-package",
+                      "types-package",
+                      "config-package",
+                    ],
+                  },
+                },
+              },
+            },
           ],
+        },
+      ],
+    },
+  },
+  // The benchmark is a Node.js package, not a Next.js application.
+  {
+    basePath: workspaceRoot,
+    files: [
+      "tools/ta09-benchmark/**/*.{js,jsx,ts,tsx,mjs,cjs,mts,cts}",
+    ],
+    settings: {
+      react: {
+        version: "19.3",
+      },
+    },
+    rules: {
+      "@next/next/no-html-link-for-pages": "off",
+      "@typescript-eslint/no-unused-vars": [
+        "warn",
+        {
+          argsIgnorePattern: "^_",
         },
       ],
     },
