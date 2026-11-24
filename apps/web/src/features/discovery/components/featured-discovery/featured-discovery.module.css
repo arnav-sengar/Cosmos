@@ -1,0 +1,301 @@
+.section {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(88px, 11vw, 152px) max(7vw, calc((100vw - 1440px) / 2));
+  background: var(--color-background-canvas);
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  align-items: center;
+  gap: clamp(48px, 8vw, 120px);
+  max-width: 1440px;
+  margin-inline: auto;
+}
+
+.visual {
+  position: relative;
+  display: grid;
+  min-height: 620px;
+  place-items: center;
+  overflow: hidden;
+  isolation: isolate;
+  border: 1px solid rgb(91 164 213 / 20%);
+  background:
+    radial-gradient(ellipse at 50% 48%, rgb(20 93 130 / 32%), transparent 48%),
+    linear-gradient(145deg, #0b2638 0%, #071522 52%, #080e1a 100%);
+}
+
+.visualGlow {
+  position: absolute;
+  width: 75%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #2a8bb7;
+  filter: blur(100px);
+  opacity: 0.14;
+}
+
+.orbit {
+  position: absolute;
+  width: 84%;
+  aspect-ratio: 1;
+  border: 1px solid rgb(123 190 226 / 24%);
+  border-radius: 50%;
+  transform: rotate(-28deg) scaleY(0.42);
+}
+
+.moon {
+  position: relative;
+  width: min(72%, 390px);
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 50%;
+  background:
+    radial-gradient(ellipse at 31% 25%, rgb(225 244 255 / 80%), transparent 8%),
+    radial-gradient(ellipse at 35% 30%, #b4d9e9 0%, #689bb7 22%, #315c78 55%, #102c43 82%);
+  box-shadow:
+    inset -32px -24px 65px rgb(0 9 20 / 80%),
+    inset 12px 10px 35px rgb(220 244 255 / 25%),
+    0 0 100px rgb(53 154 198 / 16%);
+  transform: rotate(-18deg);
+}
+
+.iceSurface {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background:
+    radial-gradient(ellipse at 20% 65%, transparent 0 8%, rgb(228 248 255 / 16%) 8.3% 8.7%, transparent 9%),
+    radial-gradient(ellipse at 68% 28%, transparent 0 12%, rgb(226 244 255 / 20%) 12.3% 12.8%, transparent 13.1%),
+    radial-gradient(ellipse at 57% 72%, transparent 0 15%, rgb(224 242 255 / 15%) 15.3% 15.8%, transparent 16.1%);
+  opacity: 0.85;
+}
+
+.iceCrack {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background:
+    linear-gradient(112deg, transparent 0 39%, rgb(230 248 255 / 42%) 39.2%, transparent 39.8%),
+    linear-gradient(73deg, transparent 0 52%, rgb(230 248 255 / 32%) 52.2%, transparent 52.8%),
+    linear-gradient(151deg, transparent 0 65%, rgb(230 248 255 / 30%) 65.2%, transparent 65.7%),
+    linear-gradient(25deg, transparent 0 28%, rgb(230 248 255 / 24%) 28.2%, transparent 28.7%);
+  opacity: 0.7;
+}
+
+.iceAtmosphere {
+  position: absolute;
+  inset: -5%;
+  border: 1px solid rgb(170 222 245 / 25%);
+  border-radius: inherit;
+  box-shadow: 0 0 30px rgb(84 182 224 / 15%);
+}
+
+.visualLabel,
+.visualIndex {
+  position: absolute;
+  z-index: 2;
+  color: rgb(190 218 238 / 65%);
+  font-family: var(--typography-technical-small-font-family);
+  font-size: var(--typography-technical-small-font-size);
+  font-weight: var(--typography-technical-small-font-weight);
+  line-height: var(--typography-technical-small-line-height);
+  letter-spacing: 0.12em;
+}
+
+.visualLabel {
+  inset: auto 24px 22px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.visualIndex {
+  top: 24px;
+  left: 24px;
+  color: var(--color-brand-secondary);
+}
+
+.content {
+  max-width: 580px;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 38px;
+  color: var(--color-brand-secondary);
+  font-family: var(--typography-technical-small-font-family);
+  font-size: var(--typography-technical-small-font-size);
+  font-weight: var(--typography-technical-small-font-weight);
+  line-height: var(--typography-technical-small-line-height);
+  letter-spacing: 0.14em;
+}
+
+.eyebrowLine {
+  width: 24px;
+  height: 1px;
+  background: currentColor;
+}
+
+.category {
+  margin-bottom: 20px;
+  color: var(--color-text-tertiary);
+  font-family: var(--typography-technical-small-font-family);
+  font-size: var(--typography-technical-small-font-size);
+  font-weight: var(--typography-technical-small-font-weight);
+  line-height: var(--typography-technical-small-line-height);
+  letter-spacing: 0.12em;
+}
+
+.title {
+  margin: 0;
+  color: var(--color-text-primary);
+  font-family: var(--typography-display-font-family);
+  font-size: clamp(42px, 5vw, 68px);
+  font-weight: var(--typography-display-font-weight);
+  letter-spacing: var(--typography-display-letter-spacing);
+  line-height: 1.08;
+}
+
+.title span {
+  color: var(--color-brand-primary);
+}
+
+.description {
+  max-width: 510px;
+  margin-top: 26px;
+  color: var(--color-text-secondary);
+  font-family: var(--typography-body-large-font-family);
+  font-size: var(--typography-body-large-font-size);
+  line-height: var(--typography-body-large-line-height);
+}
+
+.facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 38px;
+  padding-block: 22px;
+  border-top: 1px solid rgb(126 166 196 / 18%);
+  border-bottom: 1px solid rgb(126 166 196 / 18%);
+}
+
+.fact {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.factLabel {
+  color: var(--color-text-tertiary);
+  font-family: var(--typography-technical-small-font-family);
+  font-size: var(--typography-technical-small-font-size);
+  font-weight: var(--typography-technical-small-font-weight);
+  line-height: var(--typography-technical-small-line-height);
+  letter-spacing: 0.08em;
+}
+
+.factValue {
+  color: var(--color-text-primary);
+  font-family: var(--typography-body-small-font-family);
+  font-size: var(--typography-body-small-font-size);
+  font-weight: var(--typography-body-small-font-weight);
+  line-height: var(--typography-body-small-line-height);
+}
+
+.action {
+  display: inline-flex;
+  align-items: center;
+  gap: 22px;
+  margin-top: 32px;
+  color: var(--color-brand-secondary);
+  font-family: var(--typography-body-small-font-family);
+  font-size: var(--typography-body-small-font-size);
+  font-weight: 600;
+  line-height: var(--typography-body-small-line-height);
+  text-decoration: none;
+  transition: gap var(--motion-duration-fast) var(--motion-easing-standard);
+}
+
+.action:hover {
+  gap: 30px;
+}
+
+.disclaimer {
+  max-width: 480px;
+  margin-top: 24px;
+  color: var(--color-text-tertiary);
+  font-family: var(--typography-caption-font-family);
+  font-size: var(--typography-caption-font-size);
+  font-weight: var(--typography-caption-font-weight);
+  line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 54px;
+  }
+
+  .visual {
+    min-height: 540px;
+  }
+
+  .content {
+    max-width: 680px;
+  }
+}
+
+@media (max-width: 639px) {
+  .section {
+    padding: 88px 24px;
+  }
+
+  .inner {
+    gap: 42px;
+  }
+
+  .visual {
+    min-height: 390px;
+  }
+
+  .moon {
+    width: min(74%, 300px);
+  }
+
+  .eyebrow {
+    margin-bottom: 28px;
+  }
+
+  .title {
+    font-size: clamp(40px, 11vw, 54px);
+  }
+
+  .description {
+    margin-top: 20px;
+  }
+
+  .facts {
+    gap: 12px;
+    margin-top: 30px;
+  }
+
+.visualLabel {
+    inset-inline: 16px;
+  }
+
+  .visualIndex {
+    top: 16px;
+    left: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .action {
+    transition: none;
+  }
+}

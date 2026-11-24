@@ -1,0 +1,398 @@
+.section {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(96px, 10vw, 144px) max(var(--cosmos-page-gutter), calc((100vw - var(--cosmos-content-max)) / 2));
+  background: var(--color-background-canvas);
+}
+
+.inner {
+  width: 100%;
+  max-width: var(--cosmos-content-max);
+  margin-inline: auto;
+}
+
+.introduction {
+  margin-bottom: 64px;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+  color: var(--color-brand-secondary);
+  font-family: var(--typography-technical-small-font-family);
+  font-size: var(--typography-technical-small-font-size);
+  font-weight: var(--typography-technical-small-font-weight);
+  line-height: var(--typography-technical-small-line-height);
+  letter-spacing: 0.13em;
+}
+
+.eyebrowLine {
+  width: 32px;
+  height: 1px;
+  background: var(--color-brand-secondary);
+}
+
+.introductionContent {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(260px, 0.65fr);
+  align-items: end;
+  gap: 48px;
+}
+
+.title {
+  margin: 0;
+  color: var(--color-text-primary);
+  font-family: var(--typography-display-font-family);
+  font-size: clamp(2.8rem, 5.2vw, 5rem);
+  font-weight: var(--typography-display-font-weight);
+  line-height: 1.05;
+  letter-spacing: var(--typography-display-letter-spacing);
+}
+
+.title span {
+  color: var(--color-brand-primary);
+}
+
+.description {
+  max-width: 440px;
+  margin: 0 0 6px;
+  color: var(--color-text-secondary);
+  font-family: var(--typography-body-large-font-family);
+  font-size: var(--typography-body-large-font-size);
+  line-height: var(--typography-body-large-line-height);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  min-height: 440px;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid rgb(142 187 255 / 12%);
+  border-radius: 4px;
+  background: #0b1422;
+  color: var(--color-text-primary);
+  text-decoration: none;
+  transition:
+    border-color var(--motion-duration-normal) var(--motion-easing-standard),
+    transform var(--motion-duration-normal) var(--motion-easing-standard);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: rgb(142 187 255 / 35%);
+}
+
+.card:focus-visible {
+  outline: 2px solid var(--color-brand-primary);
+  outline-offset: 5px;
+}
+
+.cardVisual {
+  position: relative;
+  height: 220px;
+  flex: 0 0 220px;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 50% 80%, rgb(98 197 232 / 12%), transparent 65%),
+    linear-gradient(145deg, #101e32, #0b1422 75%);
+}
+
+.visualCore,
+.visualOrbit,
+.visualAccent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.visualCore {
+  width: 116px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 34% 28%,
+    #a8d9ed,
+    #477eaa 35%,
+    #1b3e65 68%,
+    #080d18
+  );
+  box-shadow:
+    0 0 42px rgb(98 197 232 / 20%),
+    inset -18px -14px 28px rgb(0 0 0 / 50%);
+}
+
+.visualOrbit {
+  width: 260px;
+  height: 92px;
+  border: 1px solid rgb(142 187 255 / 30%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) rotate(-22deg);
+}
+
+.visualAccent {
+  width: 10px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #d7dfea;
+  box-shadow: 0 0 18px rgb(215 223 234 / 65%);
+  translate: 104px -42px;
+}
+
+/* Explore — a planetary body and orbital path. */
+.card[data-visual="explore"] .cardVisual {
+  background:
+    radial-gradient(ellipse at 50% 80%, rgb(98 197 232 / 18%), transparent 65%),
+    linear-gradient(145deg, #10263d, #0b1422 78%);
+}
+
+.card[data-visual="explore"] .visualCore {
+  width: 130px;
+}
+
+.card[data-visual="explore"] .visualOrbit {
+  width: 300px;
+  height: 100px;
+}
+
+/* Learn — concentric layers representing deeper understanding. */
+.card[data-visual="learn"] .cardVisual {
+  background:
+    radial-gradient(circle at center, rgb(169 155 239 / 14%), transparent 65%),
+    linear-gradient(145deg, #201d3a, #0b1422 80%);
+}
+
+.card[data-visual="learn"] .visualCore {
+  width: 76px;
+  background: radial-gradient(circle at 35% 30%, #e0d9ff, #8977ca 55%, #302b59);
+  box-shadow: 0 0 50px rgb(169 155 239 / 28%);
+}
+
+.card[data-visual="learn"] .visualOrbit {
+  width: 190px;
+  height: 190px;
+  border-color: rgb(169 155 239 / 28%);
+  transform: translate(-50%, -50%);
+}
+
+.card[data-visual="learn"] .visualAccent {
+  width: 140px;
+  height: 140px;
+  border: 1px solid rgb(169 155 239 / 25%);
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: none;
+  translate: -50% -50%;
+}
+
+/* Research — an abstract network of connected observations. */
+.card[data-visual="research"] .cardVisual {
+  background:
+    radial-gradient(ellipse at 50% 50%, rgb(98 197 232 / 12%), transparent 65%),
+    linear-gradient(145deg, #102b32, #0b1422 80%);
+}
+
+.card[data-visual="research"] .visualCore {
+  width: 18px;
+  background: #a8d9ed;
+  box-shadow:
+    0 0 0 14px rgb(98 197 232 / 9%),
+    0 0 32px rgb(98 197 232 / 60%);
+}
+
+.card[data-visual="research"] .visualOrbit {
+  width: 230px;
+  height: 130px;
+  border-color: rgb(98 197 232 / 35%);
+  transform: translate(-50%, -50%) rotate(35deg);
+}
+
+.card[data-visual="research"] .visualAccent {
+  width: 12px;
+  background: #a99bef;
+  box-shadow: 0 0 20px rgb(169 155 239 / 65%);
+  translate: 88px 40px;
+}
+
+/* Community — overlapping forms representing connection. */
+.card[data-visual="community"] .cardVisual {
+  background:
+    radial-gradient(ellipse at 50% 65%, rgb(169 155 239 / 13%), transparent 65%),
+    linear-gradient(145deg, #2a203b, #0b1422 80%);
+}
+
+.card[data-visual="community"] .visualCore {
+  width: 96px;
+  background: radial-gradient(circle at 35% 30%, #e4c8df, #9a6caa 55%, #30213d);
+  transform: translate(-72%, -45%);
+}
+
+.card[data-visual="community"] .visualOrbit {
+  width: 96px;
+  height: 96px;
+  border: none;
+  background: radial-gradient(circle at 35% 30%, #c3d6f0, #6589ba 65%, #263c5e);
+  transform: translate(8%, -55%);
+  opacity: 0.85;
+}
+
+.card[data-visual="community"] .visualAccent {
+  width: 42px;
+  background: #d9c5ef;
+  box-shadow: 0 0 28px rgb(169 155 239 / 55%);
+  translate: -50% 92px;
+}
+
+.cardContent {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 26px 30px 30px;
+  background: linear-gradient(180deg, #0b1422, #0d1727);
+}
+
+.cardMeta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--color-text-tertiary);
+  font-family: var(--typography-technical-small-font-family);
+  font-size: var(--typography-technical-small-font-size);
+  font-weight: var(--typography-technical-small-font-weight);
+  line-height: var(--typography-technical-small-line-height);
+  letter-spacing: 0.12em;
+}
+
+.cardTitle {
+  margin: 22px 0 10px;
+  color: var(--color-text-primary);
+  font-family: var(--typography-display-font-family);
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: var(--typography-display-font-weight);
+  line-height: 1.1;
+}
+
+.cardDescription {
+  max-width: 440px;
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-family: var(--typography-body-font-family);
+  font-size: var(--typography-body-font-size);
+  font-weight: var(--typography-body-font-weight);
+  line-height: var(--typography-body-line-height);
+}
+
+.cardAction {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 28px;
+  color: var(--color-brand-secondary);
+  font-family: var(--typography-body-font-family);
+  font-size: var(--typography-body-font-size);
+  font-weight: 600;
+  line-height: var(--typography-body-line-height);
+}
+
+.cardAction span {
+  transition: transform var(--motion-duration-fast) var(--motion-easing-standard);
+}
+
+.card:hover .cardAction span {
+  transform: translate(3px, -3px);
+}
+
+@media (max-width: 900px) {
+  .section {
+    padding-right: var(--cosmos-page-gutter);
+    padding-left: var(--cosmos-page-gutter);
+  }
+
+  .introductionContent {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .introduction {
+    margin-bottom: 44px;
+  }
+
+  .card {
+    min-height: 420px;
+  }
+
+  .cardContent {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 639px) {
+  .section {
+    padding: 88px 24px;
+  }
+
+  .eyebrow {
+    gap: 9px;
+    margin-bottom: 22px;
+
+  }
+
+  .eyebrowLine {
+    width: 22px;
+  }
+
+  .title {
+    font-size: clamp(2.5rem, 11vw, 3.5rem);
+  }
+
+  .description {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .card {
+    min-height: 400px;
+  }
+
+  .cardVisual {
+    height: 190px;
+    flex-basis: 190px;
+  }
+
+  .cardContent {
+    padding: 22px;
+  }
+
+  .cardTitle {
+    margin-top: 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .cardAction span {
+    transition: none;
+  }
+
+  .card:hover {
+    transform: none;
+  }
+}
