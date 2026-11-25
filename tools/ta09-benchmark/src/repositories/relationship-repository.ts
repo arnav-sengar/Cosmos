@@ -87,6 +87,19 @@ export type RelationshipTraversalDirection =
   | "BIDIRECTIONAL";
 
 /**
+ * Explicit global work limits for one complete relationship traversal.
+ *
+ * maxDepth is an inclusive edge-depth boundary. The other limits bound
+ * visited entities, examined adjacency rows, and adjacency page requests.
+ */
+export interface RelationshipTraversalLimits {
+  readonly maxDepth: number;
+  readonly maxVisitedEntities: number;
+  readonly maxExaminedRelationships: number;
+  readonly maxAdjacencyPages: number;
+}
+
+/**
  * Bitemporal graph traversal request.
  *
  * When direction is omitted, OUTGOING is used.
@@ -98,6 +111,7 @@ export interface RelationshipTraversalQuery
   readonly startEntityId: CanonicalId;
   readonly direction?: RelationshipTraversalDirection;
   readonly predicate?: string;
+  readonly limits: RelationshipTraversalLimits;
 }
 
 /** One versioned edge encountered during graph traversal. */
@@ -192,14 +206,25 @@ export interface RelationshipRepository {
    * Traverse eligible graph edges from a starting entity.
    *
    * Traversal uses breadth-first depth ordering and one consistent bitemporal
-   * snapshot. Every eligible edge is considered; implementations must not
-   * silently truncate traversal.
+   * snapshot. The query must provide explicit global limits. Exceeding any
+   * work budget fails with RESOURCE_LIMIT_EXCEEDED; partial results must
+   * never be returned as a successful traversal.
+   *
+   * maxDepth is an inclusive edge boundary: edges at that depth are included,
+   * but their endpoint entities are not expanded. A depth of zero returns
+   * no edges and performs no adjacency reads.
+   *
+   * maxVisitedEntities counts the start entity and each unique discovered
+   * endpoint. maxExaminedRelationships counts every row returned by adjacency
+   * reads before predicate filtering. maxAdjacencyPages counts every
+   * outgoing and incoming page request across the complete traversal.
    *
    * Results are ordered by depth, then case-sensitive UTF-8 bytewise
    * relationship ID, then version descending, then traversal direction.
    * A logical relationship version is returned at most once per traversal.
    *
-   * Pagination cursors are bound to the complete traversal query and snapshot.
+   * Pagination cursors are bound to the complete traversal query—including
+   *   all four limits—and snapshot.
    */
   traverse(
     query: RelationshipTraversalQuery,

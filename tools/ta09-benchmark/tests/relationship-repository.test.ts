@@ -1,4 +1,4 @@
-﻿import assert from "node:assert/strict";
+import assert from "node:assert/strict";
 import test from "node:test";
 
 import {
@@ -110,6 +110,12 @@ test("allows traversal direction to be omitted", () => {
   const result = relationshipTraversalQuerySchema.safeParse({
     startEntityId: "entity-1",
     recordedAt: timestamp,
+    limits: {
+      maxDepth: 5,
+      maxVisitedEntities: 100,
+      maxExaminedRelationships: 500,
+      maxAdjacencyPages: 20,
+    },
   });
 
   assert.equal(result.success, true);
@@ -125,6 +131,12 @@ test("rejects an unsupported traversal direction", () => {
       startEntityId: "entity-1",
       recordedAt: timestamp,
       direction: "SIDEWAYS",
+      limits: {
+        maxDepth: 5,
+        maxVisitedEntities: 100,
+        maxExaminedRelationships: 500,
+        maxAdjacencyPages: 20,
+      },
     }).success,
     false,
   );
@@ -137,5 +149,101 @@ test("rejects unknown repository input properties", () => {
       unexpected: true,
     }).success,
     false,
+  );
+});
+
+test("requires explicit traversal limits", () => {
+  assert.equal(
+    relationshipTraversalQuerySchema.safeParse({
+      startEntityId: "entity-1",
+      recordedAt: timestamp,
+    }).success,
+    false,
+  );
+});
+
+test("accepts zero maxDepth and positive work budgets", () => {
+  assert.equal(
+    relationshipTraversalQuerySchema.safeParse({
+      startEntityId: "entity-1",
+      recordedAt: timestamp,
+      limits: {
+        maxDepth: 0,
+        maxVisitedEntities: 1,
+        maxExaminedRelationships: 1,
+        maxAdjacencyPages: 1,
+      },
+    }).success,
+    true,
+  );
+});
+
+test("rejects zero for non-depth traversal budgets", () => {
+  for (const key of [
+    "maxVisitedEntities",
+    "maxExaminedRelationships",
+    "maxAdjacencyPages",
+  ] as const) {
+    const limits = {
+      maxDepth: 1,
+      maxVisitedEntities: 1,
+      maxExaminedRelationships: 1,
+      maxAdjacencyPages: 1,
+      [key]: 0,
+    };
+
+    assert.equal(
+      relationshipTraversalQuerySchema.safeParse({
+        startEntityId: "entity-1",
+        recordedAt: timestamp,
+        limits,
+      }).success,
+      false,
+      `${key} should reject zero`,
+    );
+  }
+});
+
+test("rejects unknown traversal limit properties", () => {
+  assert.equal(
+    relationshipTraversalQuerySchema.safeParse({
+      startEntityId: "entity-1",
+      recordedAt: timestamp,
+      limits: {
+        maxDepth: 1,
+        maxVisitedEntities: 1,
+        maxExaminedRelationships: 1,
+        maxAdjacencyPages: 1,
+        unexpected: true,
+      },
+    }).success,
+    false,
+  );
+});
+
+test("rejects fractional traversal limits", () => {
+  assert.equal(
+    relationshipTraversalQuerySchema.safeParse({
+      startEntityId: "entity-1",
+      recordedAt: timestamp,
+      limits: {
+        maxDepth: 1.5,
+        maxVisitedEntities: 1,
+        maxExaminedRelationships: 1,
+        maxAdjacencyPages: 1,
+      },
+    }).success,
+    false,
+  );
+});
+
+test("compares sub-millisecond valid-time interval boundaries precisely", () => {
+  assert.equal(
+    createRelationshipInputSchema.safeParse({
+      ...createInput,
+      validFrom: "2026-01-01T00:00:00.0000001Z",
+      validTo: "2026-01-01T00:00:00.0000002Z",
+    }).success,
+    true,
   );
 });

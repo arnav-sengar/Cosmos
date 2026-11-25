@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Standardized provider-neutral persistence errors for TA-09.
  *
  * Adapters must map provider-specific failures into this contract without
@@ -13,6 +13,7 @@ export const PERSISTENCE_ERROR_CODES = [
   "VERSION_CONFLICT",
   "AUTHORIZATION_DENIED",
   "INTEGRITY_VIOLATION",
+  "RESOURCE_LIMIT_EXCEEDED",
   "TEMPORARY_FAILURE",
   "RESOURCE_UNAVAILABLE",
   "UNSUPPORTED_OPERATION",

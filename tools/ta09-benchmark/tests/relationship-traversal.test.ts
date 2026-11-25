@@ -171,6 +171,12 @@ function makeQuery(
   return {
     startEntityId: id("A"),
     recordedAt: timestamp,
+    limits: {
+      maxDepth: 100,
+      maxVisitedEntities: 10000,
+      maxExaminedRelationships: 100000,
+      maxAdjacencyPages: 10000,
+    },
     ...overrides,
   };
 }
@@ -404,7 +410,7 @@ test("rejects an adjacency row returned under the wrong endpoint", async () => {
       context,
       timestamp,
     ),
-    /wrong outgoing endpoint/,
+    (error: { message: string }) => /wrong outgoing endpoint/.test(error.message),
   );
 });
 
@@ -425,7 +431,7 @@ test("rejects a temporally ineligible version returned by the repository", async
       context,
       timestamp,
     ),
-    /temporally ineligible/,
+    (error: { message: string }) => /temporally ineligible/.test(error.message),
   );
 });
 
@@ -440,7 +446,7 @@ test("rejects a repeated adjacency cursor", async () => {
       pageSize: 1,
       repeatedCursor: true,
     }),
-    /repeated an adjacency cursor/,
+    (error: { message: string }) => /repeated an adjacency cursor/.test(error.message),
   );
 });
 
@@ -455,7 +461,7 @@ test("rejects malformed adjacency cursors", async () => {
       pageSize: 1,
       invalidCursor: true,
     }),
-    /malformed adjacency cursor/,
+    (error: { message: string }) => /malformed adjacency cursor/.test(error.message),
   );
 });
 
@@ -466,9 +472,346 @@ test("rejects an invalid traversal query", async () => {
       {
         startEntityId: id("A"),
         recordedAt: "not-a-date" as ISODateTime,
+        limits: {
+          maxDepth: 10,
+          maxVisitedEntities: 100,
+          maxExaminedRelationships: 1000,
+          maxAdjacencyPages: 100,
+        },
       },
       context,
       timestamp,
     ),
   );
+});
+
+test("maxDepth zero returns no edges and performs no adjacency reads", async () => {
+  let reads = 0;
+  const base = createRepository([
+    makeVersion("R-1", "A", "LINKS", "B"),
+  ]);
+
+  const repository = {
+    ...base,
+    getOutgoing: async (...args: Parameters<RelationshipRepository["getOutgoing"]>) => {
+      reads += 1;
+      return base.getOutgoing(...args);
+    },
+  } as RelationshipRepository;
+
+  const result = await collectRelationshipTraversalItems(
+    repository,
+    makeQuery({ limits: {
+      maxDepth: 0,
+      maxVisitedEntities: 1,
+      maxExaminedRelationships: 1,
+      maxAdjacencyPages: 1,
+    } }),
+    context,
+    timestamp,
+  );
+
+  assert.deepEqual(result, []);
+  assert.equal(reads, 0);
+});
+
+test("maxDepth one includes direct edges but does not expand endpoints", async () => {
+  const result = await traverse(
+    [
+      makeVersion("R-1", "A", "LINKS", "B"),
+      makeVersion("R-2", "B", "LINKS", "C"),
+    ],
+    makeQuery({ limits: {
+      maxDepth: 1,
+      maxVisitedEntities: 2,
+      maxExaminedRelationships: 2,
+      maxAdjacencyPages: 2,
+    } }),
+  );
+
+  assert.deepEqual(
+    result.map((item) => [item.relationship.relationship.id, item.depth]),
+    [["R-1", 1]],
+  );
+});
+
+test("fails when the visited entity budget is exceeded", async () => {
+  await assert.rejects(
+    traverse(
+      [makeVersion("R-1", "A", "LINKS", "B")],
+      makeQuery({ limits: {
+        maxDepth: 2,
+        maxVisitedEntities: 1,
+        maxExaminedRelationships: 10,
+        maxAdjacencyPages: 10,
+      } }),
+    ),
+    (error: unknown) => {
+      assert.equal((error as { code: string }).code, "RESOURCE_LIMIT_EXCEEDED");
+      assert.equal((error as { retryable: boolean }).retryable, false);
+      assert.equal(
+        (error as { details: { limit: string } }).details.limit,
+        "maxVisitedEntities",
+      );
+      return true;
+    },
+  );
+});
+
+test("fails when examined relationship budget is exceeded", async () => {
+  await assert.rejects(
+    traverse(
+      [
+        makeVersion("R-1", "A", "LINKS", "B"),
+        makeVersion("R-2", "A", "LINKS", "C"),
+      ],
+      makeQuery({ limits: {
+        maxDepth: 2,
+        maxVisitedEntities: 10,
+        maxExaminedRelationships: 1,
+        maxAdjacencyPages: 10,
+      } }),
+    ),
+    (error: unknown) => {
+      assert.equal((error as { code: string }).code, "RESOURCE_LIMIT_EXCEEDED");
+      assert.equal(
+        (error as { details: { limit: string } }).details.limit,
+        "maxExaminedRelationships",
+      );
+      return true;
+    },
+  );
+});
+
+test("predicate-filtered rows still count against examined relationship budget", async () => {
+  await assert.rejects(
+    traverse(
+      [
+        makeVersion("R-1", "A", "ALLOWS", "B"),
+        makeVersion("R-2", "A", "BLOCKED", "C"),
+      ],
+      makeQuery({
+        predicate: "ALLOWS",
+        limits: {
+          maxDepth: 2,
+          maxVisitedEntities: 10,
+          maxExaminedRelationships: 1,
+          maxAdjacencyPages: 10,
+        },
+      }),
+    ),
+    (error: unknown) => {
+      assert.equal((error as { code: string }).code, "RESOURCE_LIMIT_EXCEEDED");
+      return true;
+    },
+  );
+});
+
+test("fails before requesting an adjacency page beyond the page budget", async () => {
+  await assert.rejects(
+    traverse(
+      [
+        makeVersion("R-1", "A", "LINKS", "B"),
+        makeVersion("R-2", "A", "LINKS", "C"),
+      ],
+      makeQuery({ limits: {
+        maxDepth: 2,
+        maxVisitedEntities: 10,
+        maxExaminedRelationships: 10,
+        maxAdjacencyPages: 1,
+      } }),
+      { pageSize: 1 },
+    ),
+    (error: unknown) => {
+      assert.equal((error as { code: string }).code, "RESOURCE_LIMIT_EXCEEDED");
+      assert.equal(
+        (error as { details: { limit: string } }).details.limit,
+        "maxAdjacencyPages",
+      );
+      return true;
+    },
+  );
+});
+
+test("succeeds when the final adjacency page exactly reaches the page budget", async () => {
+  const result = await traverse(
+    [makeVersion("R-1", "A", "LINKS", "B")],
+    makeQuery({ limits: {
+      maxDepth: 1,
+      maxVisitedEntities: 10,
+      maxExaminedRelationships: 10,
+      maxAdjacencyPages: 1,
+    } }),
+  );
+
+  assert.equal(result.length, 1);
+});
+
+test("rejects an adjacency page larger than the requested page size", async () => {
+  const versions = Array.from({ length: 501 }, (_, index) =>
+    makeVersion(`R-${index}`, "A", "LINKS", `B-${index}`),
+  );
+
+  await assert.rejects(
+    traverse(
+      versions,
+      makeQuery({
+        limits: {
+          maxDepth: 1,
+          maxVisitedEntities: 1000,
+          maxExaminedRelationships: 1000,
+          maxAdjacencyPages: 10,
+        },
+      }),
+      { pageSize: 501 },
+    ),
+    (error: unknown) => {
+      assert.equal((error as { code: string }).code, "INTEGRITY_VIOLATION");
+      return true;
+    },
+  );
+});
+test("succeeds when the final examined relationship exactly reaches its budget", async () => {
+  const result = await traverse(
+    [makeVersion("R-1", "A", "LINKS", "B")],
+    makeQuery({
+      limits: {
+        maxDepth: 1,
+        maxVisitedEntities: 2,
+        maxExaminedRelationships: 1,
+        maxAdjacencyPages: 1,
+      },
+    }),
+  );
+
+  assert.equal(result.length, 1);
+});
+
+test("shares the adjacency page budget across outgoing and incoming reads", async () => {
+  const versions = [
+    makeVersion("R-1", "A", "LINKS", "B"),
+    makeVersion("R-2", "C", "LINKS", "A"),
+  ];
+
+  await assert.rejects(
+    traverse(
+      versions,
+      makeQuery({
+        direction: "BIDIRECTIONAL",
+        limits: {
+          maxDepth: 1,
+          maxVisitedEntities: 10,
+          maxExaminedRelationships: 10,
+          maxAdjacencyPages: 1,
+        },
+      }),
+    ),
+    (error: unknown) => {
+      const e = error as {
+        code: string;
+        retryable: boolean;
+        details: {
+          limit: string;
+          configuredLimit: number;
+          observedCount: number;
+        };
+      };
+
+      assert.equal(e.code, "RESOURCE_LIMIT_EXCEEDED");
+      assert.equal(e.retryable, false);
+      assert.equal(e.details.limit, "maxAdjacencyPages");
+      assert.equal(e.details.configuredLimit, 1);
+      assert.equal(e.details.observedCount, 2);
+      return true;
+    },
+  );
+});
+
+test("shares the examined relationship budget across outgoing and incoming reads", async () => {
+  const versions = [
+    makeVersion("R-1", "A", "LINKS", "B"),
+    makeVersion("R-2", "C", "LINKS", "A"),
+  ];
+
+  await assert.rejects(
+    traverse(
+      versions,
+      makeQuery({
+        direction: "BIDIRECTIONAL",
+        limits: {
+          maxDepth: 1,
+          maxVisitedEntities: 10,
+          maxExaminedRelationships: 1,
+          maxAdjacencyPages: 10,
+        },
+      }),
+    ),
+    (error: unknown) => {
+      const e = error as {
+        code: string;
+        details: {
+          limit: string;
+          configuredLimit: number;
+          observedCount: number;
+        };
+      };
+
+      assert.equal(e.code, "RESOURCE_LIMIT_EXCEEDED");
+      assert.equal(e.details.limit, "maxExaminedRelationships");
+      assert.equal(e.details.configuredLimit, 1);
+      assert.equal(e.details.observedCount, 2);
+      return true;
+    },
+  );
+});
+
+test("stops a continuously advancing cursor sequence at the global page budget", async () => {
+  const version = makeVersion("R-1", "A", "LINKS", "B");
+  const base = createRepository([version]);
+  let pageRequests = 0;
+
+  const repository = {
+    ...base,
+    getOutgoing: async () => {
+      pageRequests += 1;
+      return {
+        items: pageRequests === 1 ? [version] : [],
+        nextCursor: `cursor-${pageRequests}`,
+      };
+    },
+  } as unknown as RelationshipRepository;
+
+  await assert.rejects(
+    collectRelationshipTraversalItems(
+      repository,
+      makeQuery({
+        limits: {
+          maxDepth: 1,
+          maxVisitedEntities: 10,
+          maxExaminedRelationships: 10,
+          maxAdjacencyPages: 3,
+        },
+      }),
+      context,
+      timestamp,
+    ),
+    (error: unknown) => {
+      const e = error as {
+        code: string;
+        details: {
+          limit: string;
+          configuredLimit: number;
+          observedCount: number;
+        };
+      };
+
+      assert.equal(e.code, "RESOURCE_LIMIT_EXCEEDED");
+      assert.equal(e.details.limit, "maxAdjacencyPages");
+      assert.equal(e.details.configuredLimit, 3);
+      assert.equal(e.details.observedCount, 4);
+      return true;
+    },
+  );
+
+  assert.equal(pageRequests, 3);
 });

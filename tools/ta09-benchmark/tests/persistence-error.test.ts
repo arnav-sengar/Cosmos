@@ -22,13 +22,13 @@ function validError(
   };
 }
 
-test("accepts all ten standardized persistence error codes", () => {
+test("accepts all eleven standardized persistence error codes", () => {
   for (const code of PERSISTENCE_ERROR_CODES) {
     const result = persistenceErrorSchema.parse(validError({ code }));
     assert.equal(result.code, code);
   }
 
-  assert.equal(PERSISTENCE_ERROR_CODES.length, 10);
+  assert.equal(PERSISTENCE_ERROR_CODES.length, 11);
 });
 
 test("requires a non-empty error message", () => {

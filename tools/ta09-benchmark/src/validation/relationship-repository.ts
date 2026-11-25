@@ -20,6 +20,7 @@ import {
 } from "./common.js";
 
 import { relationshipSchema } from "./relationship.js";
+import { compareIsoDateTimes } from "../domain/temporal.js";
 
 const requiredTextSchema = z.string().refine(
   (value) => value.length > 0 && value.trim() === value,
@@ -34,7 +35,7 @@ const validInterval = (
 ) => {
   if (
     value.validTo !== undefined &&
-    Date.parse(value.validTo) <= Date.parse(value.validFrom)
+    compareIsoDateTimes(value.validTo, value.validFrom) <= 0
   ) {
     context.addIssue({
       code: "custom",
@@ -119,6 +120,14 @@ export const relationshipTraversalDirectionSchema = z.enum([
   "BIDIRECTIONAL",
 ]);
 
+/** Strict, explicit resource limits for one complete traversal. */
+export const relationshipTraversalLimitsSchema = z.strictObject({
+  maxDepth: z.number().int().nonnegative().safe(),
+  maxVisitedEntities: z.number().int().positive().safe(),
+  maxExaminedRelationships: z.number().int().positive().safe(),
+  maxAdjacencyPages: z.number().int().positive().safe(),
+});
+
 /** Validated bitemporal graph traversal query. */
 export const relationshipTraversalQuerySchema: z.ZodType<RelationshipTraversalQuery> =
   z
@@ -128,9 +137,11 @@ export const relationshipTraversalQuerySchema: z.ZodType<RelationshipTraversalQu
       recordedAt: isoDateTimeSchema,
       direction: relationshipTraversalDirectionSchema.optional(),
       predicate: requiredTextSchema.optional(),
+      limits: relationshipTraversalLimitsSchema,
     })
-    .transform(({ validAt, direction, predicate, ...value }) => ({
+    .transform(({ validAt, direction, predicate, limits, ...value }) => ({
       ...value,
+      limits,
       ...(validAt === undefined ? {} : { validAt }),
       ...(direction === undefined ? {} : { direction }),
       ...(predicate === undefined ? {} : { predicate }),
